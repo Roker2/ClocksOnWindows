@@ -11,15 +11,15 @@ class LabelClocks : public QLabel
 protected:
     virtual void timerEvent(QTimerEvent*)
     {
-        if (Menu)
-            changeTransparent("QLabel {color : rgba(255, 255, 255, " + QString::number(Menu->TransparentValue()) + "); font-size:36px}");
+        if (SettingsMenu)
+            changeTransparent("QLabel {color : rgba(255, 255, 255, " + QString::number(SettingsMenu->TransparentValue()) + "); font-size:36px}");
         else
             changeTransparent("QLabel {color : rgba(255, 255, 255, 80); font-size:36px}");
         QTime time = QTime::currentTime();
         setText(time.toString("h:mm:ss"));
     }
 public:
-    Clocks *Menu = NULL;
+    Clocks *SettingsMenu = NULL;
     LabelClocks(QWidget *parent) :
         QLabel(parent)
     {
