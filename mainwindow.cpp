@@ -18,9 +18,3 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
-
-void MainWindow::on_pushButton_clicked()
-{
-    //QMessageBox::information(this, "Tutturu", "Tutturu!");
-    Settings->show();
-}
