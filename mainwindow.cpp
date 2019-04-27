@@ -18,3 +18,8 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+void MainWindow::on_horizontalSlider_valueChanged(int value)
+{
+    testClocks->changeTransparent("QLabel {color : rgba(0, 0, 255, " + QString::number(ui->horizontalSlider->value()) + "); font-size:36px}");
+}

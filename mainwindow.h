@@ -18,16 +18,16 @@ public:
     LabelClocks(QWidget *parent) :
         QLabel(parent)
     {
-        setStyleSheet("QLabel {color : rgba(0, 0, 255, 122); font-size:36px}");
+        setStyleSheet("QLabel {color : rgba(255, 255, 255, 80); font-size:36px}");
         setWindowFlag(Qt::WindowStaysOnTopHint);
         setWindowFlag(Qt::FramelessWindowHint);
         setAttribute(Qt::WA_TranslucentBackground);
         setGeometry(0, 0, 36*8, height());
         startTimer(1000);
     }
-    void changeTransparent(int value)
+    void changeTransparent(QString style)
     {
-        setStyleSheet("QLabel {color : rgba(0, 0, 255, value); font-size:36px}");
+        setStyleSheet(style); //"QLabel {color : rgba(0, 0, 255, value); font-size:36px}"
     }
 };
 
@@ -43,6 +43,9 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     LabelClocks *testClocks;
+
+private slots:
+    void on_horizontalSlider_valueChanged(int value);
 
 private:
     Ui::MainWindow *ui;
