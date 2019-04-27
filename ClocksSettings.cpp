@@ -1,5 +1,5 @@
 #include "ClocksSettings.h"
-#include "ui_clocks.h"
+#include "ui_ClocksSettings.h"
 #include "mainwindow.h"
 
 Clocks::Clocks(QWidget *parent) :
