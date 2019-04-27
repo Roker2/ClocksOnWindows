@@ -35,7 +35,7 @@ HEADERS += \
 
 FORMS += \
         mainwindow.ui \
-    clocks.ui
+    ClocksSettings.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
