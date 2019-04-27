@@ -11,10 +11,15 @@ class LabelClocks : public QLabel
 protected:
     virtual void timerEvent(QTimerEvent*)
     {
+        if (Menu)
+            changeTransparent("QLabel {color : rgba(255, 255, 255, " + QString::number(Menu->TransparentValue()) + "); font-size:36px}");
+        else
+            changeTransparent("QLabel {color : rgba(255, 255, 255, 80); font-size:36px}");
         QTime time = QTime::currentTime();
         setText(time.toString("h:mm:ss"));
     }
 public:
+    Clocks *Menu = NULL;
     LabelClocks(QWidget *parent) :
         QLabel(parent)
     {
@@ -23,7 +28,7 @@ public:
         setWindowFlag(Qt::FramelessWindowHint);
         setAttribute(Qt::WA_TranslucentBackground);
         setGeometry(0, 0, 36*8, height());
-        startTimer(1000);
+        startTimer(1);
     }
     void changeTransparent(QString style)
     {
@@ -43,9 +48,6 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     LabelClocks *testClocks;
-
-private slots:
-    void on_horizontalSlider_valueChanged(int value);
 
 private:
     Ui::MainWindow *ui;

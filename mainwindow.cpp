@@ -9,17 +9,13 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    testClocks = new LabelClocks(this);
     Settings = new Clocks;
+    testClocks = new LabelClocks(this);
+    testClocks->Menu = Settings;
     connect(ui->Button_Open_Settings, SIGNAL(clicked()), Settings, SLOT(show()));
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
-}
-
-void MainWindow::on_horizontalSlider_valueChanged(int value)
-{
-    testClocks->changeTransparent("QLabel {color : rgba(255, 255, 255, " + QString::number(ui->horizontalSlider->value()) + "); font-size:36px}");
 }

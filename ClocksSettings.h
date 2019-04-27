@@ -14,6 +14,10 @@ class Clocks : public QWidget
 public:
     explicit Clocks(QWidget *parent = nullptr);
     ~Clocks();
+    int TransparentValue();
+
+private slots:
+    void on_Slider_Transparent_valueChanged(int value);
 
 private:
     Ui::Clocks *ui;

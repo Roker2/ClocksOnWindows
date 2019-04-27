@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QSlider" name="horizontalSlider">
+  <widget class="QSlider" name="Slider_Transparent">
    <property name="geometry">
     <rect>
      <x>11</x>
@@ -24,6 +24,9 @@
    </property>
    <property name="maximum">
     <number>255</number>
+   </property>
+   <property name="value">
+    <number>80</number>
    </property>
    <property name="orientation">
     <enum>Qt::Horizontal</enum>
