@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include <QLabel>
 #include <QTime>
-#include "clocks.h"
+#include "ClocksSettings.h"
 
 class LabelClocks : public QLabel
 {

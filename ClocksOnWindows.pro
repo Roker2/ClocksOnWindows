@@ -27,11 +27,11 @@ CONFIG += c++11
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    clocks.cpp
+    ClocksSettings.cpp
 
 HEADERS += \
         mainwindow.h \
-    clocks.h
+    ClocksSettings.h
 
 FORMS += \
         mainwindow.ui \

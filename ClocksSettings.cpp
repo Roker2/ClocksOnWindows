@@ -1,4 +1,4 @@
-#include "clocks.h"
+#include "ClocksSettings.h"
 #include "ui_clocks.h"
 #include "mainwindow.h"
 
