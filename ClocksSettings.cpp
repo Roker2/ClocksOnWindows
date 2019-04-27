@@ -18,8 +18,3 @@ int Clocks::TransparentValue()
 {
     return ui->Slider_Transparent->value();
 }
-
-void Clocks::on_Slider_Transparent_valueChanged(int value)
-{
-
-}
