@@ -10,6 +10,8 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     testClocks = new LabelClocks(this);
+    Settings = new Clocks;
+    connect(ui->Button_Open_Settings, SIGNAL(clicked()), Settings, SLOT(show()));
 }
 
 MainWindow::~MainWindow()
@@ -19,5 +21,6 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    QMessageBox::information(this, "Tutturu", "Tutturu!");
+    //QMessageBox::information(this, "Tutturu", "Tutturu!");
+    Settings->show();
 }

@@ -49,6 +49,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    Clocks *Settings;
 };
 
 #endif // MAINWINDOW_H
