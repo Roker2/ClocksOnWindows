@@ -15,6 +15,9 @@ public:
     explicit Clocks(QWidget *parent = nullptr);
     ~Clocks();
     int TransparentValue();
+    int RedValue();
+    int GreenValue();
+    int BlueValue();
 
 private:
     Ui::Clocks *ui;

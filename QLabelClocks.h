@@ -12,7 +12,7 @@ protected:
     {
         if (SettingsMenu)
         {
-            changeTransparent("{color : rgba(255, 255, 255, " + QString::number(SettingsMenu->TransparentValue()) + ");");
+            changeTransparent("{color : rgba(" + QString::number(SettingsMenu->RedValue()) + ", " + QString::number(SettingsMenu->GreenValue()) + ", " + QString::number(SettingsMenu->BlueValue()) + ", " + QString::number(SettingsMenu->TransparentValue()) + ");");
         }
         else
         {
