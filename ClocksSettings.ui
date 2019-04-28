@@ -6,140 +6,112 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>554</width>
-    <height>284</height>
+    <width>441</width>
+    <height>142</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QSlider" name="Slider_Transparent">
+  <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
-     <x>11</x>
-     <y>30</y>
-     <width>301</width>
-     <height>20</height>
+     <x>0</x>
+     <y>0</y>
+     <width>441</width>
+     <height>141</height>
     </rect>
    </property>
-   <property name="maximum">
-    <number>255</number>
-   </property>
-   <property name="value">
-    <number>80</number>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Horizontal</enum>
-   </property>
-  </widget>
-  <widget class="QLabel" name="Label_Transparent">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>10</y>
-     <width>71</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Transparent</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="Label_Red">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>50</y>
-     <width>57</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Red</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="Label_Green">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>100</y>
-     <width>57</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Green</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="Label_Blue">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>150</y>
-     <width>57</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Blue</string>
-   </property>
-  </widget>
-  <widget class="QSlider" name="Slider_Red">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>70</y>
-     <width>301</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="maximum">
-    <number>255</number>
-   </property>
-   <property name="value">
-    <number>255</number>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Horizontal</enum>
-   </property>
-  </widget>
-  <widget class="QSlider" name="Slider_Green">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>130</y>
-     <width>301</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="maximum">
-    <number>255</number>
-   </property>
-   <property name="value">
-    <number>255</number>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Horizontal</enum>
-   </property>
-  </widget>
-  <widget class="QSlider" name="Slider_Blue">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>180</y>
-     <width>301</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="maximum">
-    <number>255</number>
-   </property>
-   <property name="value">
-    <number>255</number>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Horizontal</enum>
-   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QLabel" name="Label_Transparent">
+        <property name="text">
+         <string>Transparent</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="Label_Red">
+        <property name="text">
+         <string>Red</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="Label_Green">
+        <property name="text">
+         <string>Green</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="Label_Blue">
+        <property name="text">
+         <string>Blue</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QSlider" name="Slider_Transparent">
+        <property name="maximum">
+         <number>255</number>
+        </property>
+        <property name="value">
+         <number>80</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSlider" name="Slider_Red">
+        <property name="maximum">
+         <number>255</number>
+        </property>
+        <property name="value">
+         <number>255</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSlider" name="Slider_Green">
+        <property name="maximum">
+         <number>255</number>
+        </property>
+        <property name="value">
+         <number>255</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSlider" name="Slider_Blue">
+        <property name="maximum">
+         <number>255</number>
+        </property>
+        <property name="value">
+         <number>255</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>
