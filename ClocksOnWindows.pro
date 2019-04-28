@@ -31,7 +31,8 @@ SOURCES += \
 
 HEADERS += \
         mainwindow.h \
-    ClocksSettings.h
+    ClocksSettings.h \
+    QLabelClocks.h
 
 FORMS += \
         mainwindow.ui \
