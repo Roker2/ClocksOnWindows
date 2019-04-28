@@ -11,7 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Clocks On Windows</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../ClocksOnWindows/icons/baseline_schedule_white_48dp.png</normaloff>../ClocksOnWindows/icons/baseline_schedule_white_48dp.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">border: none;</string>
