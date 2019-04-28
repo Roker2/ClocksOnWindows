@@ -15,7 +15,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>../ClocksOnWindows/icons/baseline_extension_white_48dp.png</normaloff>../ClocksOnWindows/icons/baseline_extension_white_48dp.png</iconset>
+    <normaloff>icons/baseline_extension_white_48dp.png</normaloff>icons/baseline_extension_white_48dp.png</iconset>
   </property>
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
