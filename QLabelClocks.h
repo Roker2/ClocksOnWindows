@@ -8,6 +8,8 @@
 class QLabelClocks : public QLabel
 {
 protected:
+    Clocks *SettingsMenu = NULL;
+    QPushButton *SettingsButton = NULL;
     virtual void timerEvent(QTimerEvent*)
     {
         if (SettingsMenu)
@@ -22,8 +24,14 @@ protected:
         setText(time.toString("h:mm:ss"));
     }
 public:
-    Clocks *SettingsMenu = NULL;
-    QPushButton *SettingsButton = NULL;
+    void SetSettingsMenu(Clocks *temp)
+    {
+        SettingsMenu = temp;
+    }
+    void SetSettingsButton(QPushButton *temp)
+    {
+        SettingsButton = temp;
+    }
     QLabelClocks(QWidget *parent) :
         QLabel(parent)
     {
