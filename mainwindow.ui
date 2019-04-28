@@ -6,12 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>396</width>
-    <height>132</height>
+    <width>232</width>
+    <height>119</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">border: none;</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QPushButton" name="Button_Open_Settings">
@@ -57,7 +60,7 @@ border: none;</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>396</width>
+     <width>232</width>
      <height>28</height>
     </rect>
    </property>
