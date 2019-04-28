@@ -19,6 +19,13 @@ public:
     int GreenValue();
     int BlueValue();
 
+private slots:
+    void on_Button_SetWhite_clicked();
+
+    void on_Button_SetGrey_clicked();
+
+    void on_Button_SetBlack_clicked();
+
 private:
     Ui::Clocks *ui;
 };

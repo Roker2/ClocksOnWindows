@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>441</width>
-    <height>142</height>
+    <height>181</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -114,6 +114,39 @@
        </widget>
       </item>
      </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>141</y>
+     <width>441</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <widget class="QPushButton" name="Button_SetWhite">
+      <property name="text">
+       <string>White</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="Button_SetGrey">
+      <property name="text">
+       <string>Grey</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="Button_SetBlack">
+      <property name="text">
+       <string>Black</string>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>
