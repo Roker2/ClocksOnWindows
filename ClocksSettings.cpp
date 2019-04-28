@@ -53,3 +53,8 @@ void Clocks::on_Button_SetBlack_clicked()
     ui->Slider_Green->setValue(0);
     ui->Slider_Blue->setValue(0);
 }
+
+void Clocks::on_fontComboBox_currentFontChanged(const QFont &f)
+{
+    QApplication::setFont(f);
+}

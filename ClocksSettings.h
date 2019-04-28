@@ -26,6 +26,8 @@ private slots:
 
     void on_Button_SetBlack_clicked();
 
+    void on_fontComboBox_currentFontChanged(const QFont &f);
+
 private:
     Ui::Clocks *ui;
 };
