@@ -2,6 +2,7 @@
 #define QLABELCLOCKS_H
 #include <QLabel>
 #include <QTime>
+#include <QPushButton>
 #include "ClocksSettings.h"
 
 class QLabelClocks : public QLabel
@@ -10,14 +11,19 @@ protected:
     virtual void timerEvent(QTimerEvent*)
     {
         if (SettingsMenu)
-            changeTransparent("QLabel {color : rgba(255, 255, 255, " + QString::number(SettingsMenu->TransparentValue()) + "); font-size:36px}");
+        {
+            changeTransparent("{color : rgba(255, 255, 255, " + QString::number(SettingsMenu->TransparentValue()) + ");");
+        }
         else
+        {
             changeTransparent("QLabel {color : rgba(255, 255, 255, 80); font-size:36px}");
+        }
         QTime time = QTime::currentTime();
         setText(time.toString("h:mm:ss"));
     }
 public:
     Clocks *SettingsMenu = NULL;
+    QPushButton *SettingsButton = NULL;
     QLabelClocks(QWidget *parent) :
         QLabel(parent)
     {
@@ -30,7 +36,8 @@ public:
     }
     void changeTransparent(QString style)
     {
-        setStyleSheet(style); //"QLabel {color : rgba(0, 0, 255, value); font-size:36px}"
+        setStyleSheet("QLabel " + style + " font-size:36px}"); //"QLabel {color : rgba(0, 0, 255, value); font-size:36px}"
+        SettingsButton->setStyleSheet("QPushButton " + style + " background-color: rgba(255, 255, 255, 0); border: none}");
     }
 };
 

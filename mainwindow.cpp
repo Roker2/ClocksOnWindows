@@ -8,8 +8,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     Settings = new Clocks;
     testClocks = new QLabelClocks(this);
-    testClocks->SettingsMenu = Settings;
     connect(ui->Button_Open_Settings, SIGNAL(clicked()), Settings, SLOT(show()));
+    testClocks->SettingsMenu = Settings;
+    testClocks->SettingsButton = ui->Button_Open_Settings;
 }
 
 MainWindow::~MainWindow()
