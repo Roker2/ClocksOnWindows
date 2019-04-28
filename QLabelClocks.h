@@ -16,7 +16,7 @@ protected:
         }
         else
         {
-            changeTransparent("QLabel {color : rgba(255, 255, 255, 80); font-size:36px}");
+            changeTransparent("{color : rgba(255, 255, 255, 80);");
         }
         QTime time = QTime::currentTime();
         setText(time.toString("h:mm:ss"));
