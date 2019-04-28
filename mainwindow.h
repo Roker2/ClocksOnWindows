@@ -6,7 +6,7 @@
 #include <QTime>
 #include "ClocksSettings.h"
 
-class LabelClocks : public QLabel
+class QLabelClocks : public QLabel
 {
 protected:
     virtual void timerEvent(QTimerEvent*)
@@ -20,7 +20,7 @@ protected:
     }
 public:
     Clocks *SettingsMenu = NULL;
-    LabelClocks(QWidget *parent) :
+    QLabelClocks(QWidget *parent) :
         QLabel(parent)
     {
         setStyleSheet("QLabel {color : rgba(255, 255, 255, 80); font-size:36px}");
@@ -47,7 +47,7 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    LabelClocks *testClocks;
+    QLabelClocks *testClocks;
 
 private:
     Ui::MainWindow *ui;
