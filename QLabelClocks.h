@@ -14,11 +14,11 @@ protected:
     {
         if (SettingsMenu)
         {
-            changeTransparent("{color : rgba(" + QString::number(SettingsMenu->RedValue()) + ", " + QString::number(SettingsMenu->GreenValue()) + ", " + QString::number(SettingsMenu->BlueValue()) + ", " + QString::number(SettingsMenu->TransparentValue()) + ");");
+            changeColor(SettingsMenu->RedValue(), SettingsMenu->GreenValue(), SettingsMenu->BlueValue(), SettingsMenu->TransparentValue());
         }
         else
         {
-            changeTransparent("{color : rgba(255, 255, 255, 80);");
+            changeColor(255, 255, 255, 80);
         }
         QTime time = QTime::currentTime();
         setText(time.toString("h:mm:ss"));
@@ -42,10 +42,10 @@ public:
         setGeometry(0, 0, 36*8, height());
         startTimer(1);
     }
-    void changeTransparent(QString style)
+    void changeColor(int red, int green, int blue, int alpha)
     {
-        setStyleSheet("QLabel " + style + " font-size:36px}"); //"QLabel {color : rgba(0, 0, 255, value); font-size:36px}"
-        SettingsButton->setStyleSheet("QPushButton " + style + " background-color: rgba(255, 255, 255, 0); border: none}");
+        setStyleSheet("QLabel {color : rgba(" + QString::number(red) + ", " + QString::number(green) + ", " + QString::number(blue) + ", " + QString::number(alpha) + "); font-size:36px}"); //"QLabel {color : rgba(0, 0, 255, value); font-size:36px}"
+        SettingsButton->setStyleSheet("QPushButton  {color : rgba(" + QString::number(red) + ", " + QString::number(green) + ", " + QString::number(blue) + ", " + QString::number(alpha) + "); background-color: rgba(" + QString::number(red) + ", " + QString::number(green) + ", " + QString::number(blue) + ", " + QString::number(alpha * 0.35) + "); border: none}");
     }
 };
 
