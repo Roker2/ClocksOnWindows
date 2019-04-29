@@ -63,6 +63,9 @@
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
        <widget class="QSlider" name="Slider_Transparent">
+        <property name="minimum">
+         <number>5</number>
+        </property>
         <property name="maximum">
          <number>255</number>
         </property>
