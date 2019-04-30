@@ -15,7 +15,7 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    QLabelClocks *testClocks;
+    QLabelClocks *LabelClocks;
 
 private:
     Ui::MainWindow *ui;
