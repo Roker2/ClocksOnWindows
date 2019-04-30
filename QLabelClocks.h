@@ -23,6 +23,7 @@ protected:
         }
         QTime time = QTime::currentTime();
         setText(time.toString(ClocksType));
+        SetSizeAndPos();
     }
     void changeColor(int red, int green, int blue, int alpha)
     {
@@ -49,7 +50,6 @@ public:
         setWindowFlag(Qt::WindowStaysOnTopHint);
         setWindowFlag(Qt::FramelessWindowHint);
         setAttribute(Qt::WA_TranslucentBackground);
-        SetSizeAndPos();
         startTimer(1);
     }
 };
