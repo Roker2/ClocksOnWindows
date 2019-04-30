@@ -21,7 +21,7 @@ protected:
             changeColor(255, 255, 255, 80);
         }
         QTime time = QTime::currentTime();
-        setText(time.toString("h:mm:ss"));
+        setText(time.toString("hh:mm:ss"));
     }
     void changeColor(int red, int green, int blue, int alpha)
     {
@@ -44,7 +44,7 @@ public:
         setWindowFlag(Qt::WindowStaysOnTopHint);
         setWindowFlag(Qt::FramelessWindowHint);
         setAttribute(Qt::WA_TranslucentBackground);
-        setGeometry(0, 0, 36*5, height());
+        setGeometry(0, 0, width(), height());
         startTimer(1);
     }
 };
