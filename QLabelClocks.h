@@ -8,6 +8,7 @@
 class QLabelClocks : public QLabel
 {
 protected:
+    QString TypeClocks = "hh:mm:ss";
     Clocks *SettingsMenu = NULL;
     QPushButton *SettingsButton = NULL;
     virtual void timerEvent(QTimerEvent*)
@@ -21,7 +22,7 @@ protected:
             changeColor(255, 255, 255, 80);
         }
         QTime time = QTime::currentTime();
-        setText(time.toString("hh:mm:ss"));
+        setText(time.toString(TypeClocks));
     }
     void changeColor(int red, int green, int blue, int alpha)
     {
