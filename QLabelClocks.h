@@ -38,6 +38,10 @@ protected:
         setStyleSheet("QLabel {color : rgba(" + QString::number(red) + ", " + QString::number(green) + ", " + QString::number(blue) + ", " + QString::number(alpha) + "); font-size:36px}"); //"QLabel {color : rgba(0, 0, 255, value); font-size:36px}"
         SettingsButton->setStyleSheet("QPushButton  {color : rgba(" + QString::number(red) + ", " + QString::number(green) + ", " + QString::number(blue) + ", " + QString::number(alpha) + "); background-color: rgba(" + QString::number(red) + ", " + QString::number(green) + ", " + QString::number(blue) + ", " + QString::number(alpha * 0.35) + "); border: none}");
     }
+    void SetSizeAndPos()
+    {
+        setGeometry(0, 0, width()*1.5, height());
+    }
 public:
     void SetSettingsMenu(Clocks *temp)
     {
@@ -46,10 +50,6 @@ public:
     void SetSettingsButton(QPushButton *temp)
     {
         SettingsButton = temp;
-    }
-    void SetSizeAndPos()
-    {
-        setGeometry(0, 0, width()*1.5, height());
     }
     QLabelClocks(QWidget *parent) :
         QLabel(parent)
