@@ -44,7 +44,7 @@ public:
         setWindowFlag(Qt::WindowStaysOnTopHint);
         setWindowFlag(Qt::FramelessWindowHint);
         setAttribute(Qt::WA_TranslucentBackground);
-        setGeometry(0, 0, 36*8, height());
+        setGeometry(0, 0, 36*5, height());
         startTimer(1);
     }
 };
