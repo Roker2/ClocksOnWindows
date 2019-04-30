@@ -54,7 +54,7 @@ public:
     QLabelClocks(QWidget *parent) :
         QLabel(parent)
     {
-        setStyleSheet("QLabel {color : rgba(255, 255, 255, 80); font-size:36px}");
+        setStyleSheet("QLabel {color : rgba("+ QString::number(red) +", "+ QString::number(blue) +", "+ QString::number(green) +", "+ QString::number(alpha) +"); font-size:36px}");
         setWindowFlag(Qt::WindowStaysOnTopHint);
         setWindowFlag(Qt::FramelessWindowHint);
         setAttribute(Qt::WA_TranslucentBackground);
