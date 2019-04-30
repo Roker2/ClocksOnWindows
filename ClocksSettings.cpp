@@ -13,11 +13,6 @@ Clocks::~Clocks()
     delete ui;
 }
 
-int Clocks::TransparentValue()
-{
-    return ui->Slider_Transparent->value();
-}
-
 int Clocks::RedValue()
 {
     return ui->Slider_Red->value();
@@ -31,6 +26,11 @@ int Clocks::GreenValue()
 int Clocks::BlueValue()
 {
     return ui->Slider_Blue->value();
+}
+
+int Clocks::AlphaValue()
+{
+    return ui->Slider_Transparent->value();
 }
 
 void Clocks::on_Button_SetWhite_clicked()

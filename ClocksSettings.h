@@ -14,10 +14,10 @@ class Clocks : public QWidget
 public:
     explicit Clocks(QWidget *parent = nullptr);
     ~Clocks();
-    int TransparentValue();
     int RedValue();
     int GreenValue();
     int BlueValue();
+    int AlphaValue();
 
 private slots:
     void on_Button_SetWhite_clicked();

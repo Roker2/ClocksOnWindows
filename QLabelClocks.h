@@ -14,7 +14,7 @@ protected:
     {
         if (SettingsMenu)
         {
-            changeColor(SettingsMenu->RedValue(), SettingsMenu->GreenValue(), SettingsMenu->BlueValue(), SettingsMenu->TransparentValue());
+            changeColor(SettingsMenu->RedValue(), SettingsMenu->GreenValue(), SettingsMenu->BlueValue(), SettingsMenu->AlphaValue());
         }
         else
         {
