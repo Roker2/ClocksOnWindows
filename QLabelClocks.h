@@ -18,22 +18,22 @@ protected:
         {
             if (red != SettingsMenu->RedValue() || green != SettingsMenu->GreenValue() || blue != SettingsMenu->BlueValue() || alpha != SettingsMenu->AlphaValue())
             {
-                changeColor(SettingsMenu->RedValue(), SettingsMenu->GreenValue(), SettingsMenu->BlueValue(), SettingsMenu->AlphaValue());
                 red = SettingsMenu->RedValue();
                 green = SettingsMenu->GreenValue();
                 blue = SettingsMenu->BlueValue();
                 alpha = SettingsMenu->AlphaValue();
+                changeColor();
             }
         }
         else
         {
-            changeColor(red, green, blue, alpha);
+            changeColor();
         }
         QTime time = QTime::currentTime();
         setText(time.toString(ClocksType));
         SetSizeAndPos();
     }
-    void changeColor(int red, int green, int blue, int alpha)
+    void changeColor()
     {
         setStyleSheet("QLabel {color : rgba(" + QString::number(red) + ", " + QString::number(green) + ", " + QString::number(blue) + ", " + QString::number(alpha) + "); font-size:36px}"); //"QLabel {color : rgba(0, 0, 255, value); font-size:36px}"
         SettingsButton->setStyleSheet("QPushButton  {color : rgba(" + QString::number(red) + ", " + QString::number(green) + ", " + QString::number(blue) + ", " + QString::number(alpha) + "); background-color: rgba(" + QString::number(red) + ", " + QString::number(green) + ", " + QString::number(blue) + ", " + QString::number(alpha * 0.35) + "); border: none}");
