@@ -8,6 +8,7 @@
 class QLabelClocks : public QLabel
 {
 protected:
+    int red = 255, green = 255, blue = 255, alpha = 80;
     QString ClocksType = "hh:mm:ss";
     Clocks *SettingsMenu = NULL;
     QPushButton *SettingsButton = NULL;
@@ -15,11 +16,18 @@ protected:
     {
         if (SettingsMenu)
         {
-            changeColor(SettingsMenu->RedValue(), SettingsMenu->GreenValue(), SettingsMenu->BlueValue(), SettingsMenu->AlphaValue());
+            if (red != SettingsMenu->RedValue() || green != SettingsMenu->GreenValue() || blue != SettingsMenu->BlueValue() || alpha != SettingsMenu->AlphaValue())
+            {
+                changeColor(SettingsMenu->RedValue(), SettingsMenu->GreenValue(), SettingsMenu->BlueValue(), SettingsMenu->AlphaValue());
+                red = SettingsMenu->RedValue();
+                green = SettingsMenu->GreenValue();
+                blue = SettingsMenu->BlueValue();
+                alpha = SettingsMenu->AlphaValue();
+            }
         }
         else
         {
-            changeColor(255, 255, 255, 80);
+            changeColor(red, green, blue, alpha);
         }
         QTime time = QTime::currentTime();
         setText(time.toString(ClocksType));
