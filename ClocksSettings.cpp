@@ -1,8 +1,8 @@
 #include "ClocksSettings.h"
 #include "ui_ClocksSettings.h"
 
-Clocks::Clocks(QDialog *parent) :
-    QDialog(parent),
+Clocks::Clocks(QWidget *parent) :
+    QWidget(parent),
     ui(new Ui::Clocks)
 {
     ui->setupUi(this);

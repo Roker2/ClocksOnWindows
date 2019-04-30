@@ -2,18 +2,17 @@
 #define CLOCKS_H
 
 #include <QWidget>
-#include <QDialog>
 
 namespace Ui {
 class Clocks;
 }
 
-class Clocks : public QDialog
+class Clocks : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit Clocks(QDialog *parent = nullptr);
+    explicit Clocks(QWidget *parent = nullptr);
     ~Clocks();
     int TransparentValue();
     int RedValue();
