@@ -38,6 +38,10 @@ public:
     {
         SettingsButton = temp;
     }
+    void SetSizeAndPos()
+    {
+        setGeometry(0, 0, width()*1.5, height());
+    }
     QLabelClocks(QWidget *parent) :
         QLabel(parent)
     {
@@ -45,7 +49,7 @@ public:
         setWindowFlag(Qt::WindowStaysOnTopHint);
         setWindowFlag(Qt::FramelessWindowHint);
         setAttribute(Qt::WA_TranslucentBackground);
-        setGeometry(0, 0, width()*1.5, height());
+        SetSizeAndPos();
         startTimer(1);
     }
 };
