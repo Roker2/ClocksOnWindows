@@ -44,9 +44,12 @@ protected:
         setGeometry(0, 0, width()*1.5, height());
         if (SettingsMenu)
         {
-            x = SettingsMenu->Coordinate_x();
-            y = SettingsMenu->Coordinate_y();
-            MainMenu->setGeometry(x, y, MainMenu->width(), MainMenu->height());
+            if (x != SettingsMenu->Coordinate_x() || y != SettingsMenu->Coordinate_y())
+            {
+                x = SettingsMenu->Coordinate_x();
+                y = SettingsMenu->Coordinate_y();
+                MainMenu->setGeometry(x, y, MainMenu->width(), MainMenu->height());
+            }
         }
     }
 public:
