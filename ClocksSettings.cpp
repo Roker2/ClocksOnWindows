@@ -54,6 +54,16 @@ void Clocks::on_Button_SetBlack_clicked()
     ui->Slider_Blue->setValue(0);
 }
 
+int Clocks::Coordinate_x()
+{
+    return ui->Edit_coordinate_x->text().toInt();
+}
+
+int Clocks::Coordinate_y()
+{
+    return ui->Edit_coordinate_y->text().toInt();
+}
+
 void Clocks::on_fontComboBox_currentFontChanged(const QFont &f)
 {
     QApplication::setFont(f);

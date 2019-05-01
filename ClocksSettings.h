@@ -18,6 +18,8 @@ public:
     int GreenValue();
     int BlueValue();
     int AlphaValue();
+    int Coordinate_x();
+    int Coordinate_y();
 
 private slots:
     void on_Button_SetWhite_clicked();
