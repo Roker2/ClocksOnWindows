@@ -8,10 +8,11 @@
 class QLabelClocks : public QLabel
 {
 protected:
-    int red = 255, green = 255, blue = 255, alpha = 80;
+    int red = 255, green = 255, blue = 255, alpha = 80, x = 0, y = 0;
     QString ClocksType = "hh:mm:ss";
     Clocks *SettingsMenu = NULL;
     QPushButton *SettingsButton = NULL;
+    QWidget *MainMenu = NULL;
     virtual void timerEvent(QTimerEvent*)
     {
         if (SettingsMenu)
@@ -41,6 +42,12 @@ protected:
     void SetSizeAndPos()
     {
         setGeometry(0, 0, width()*1.5, height());
+        if (SettingsMenu)
+        {
+            x = SettingsMenu->Coordinate_x();
+            y = SettingsMenu->Coordinate_y();
+        }
+        MainMenu->setGeometry(x, y, MainMenu->width(), MainMenu->height());
     }
 public:
     void SetSettingsMenu(Clocks *temp)
@@ -58,6 +65,7 @@ public:
         setWindowFlag(Qt::WindowStaysOnTopHint);
         setWindowFlag(Qt::FramelessWindowHint);
         setAttribute(Qt::WA_TranslucentBackground);
+        MainMenu = parent;
         startTimer(1);
     }
 };
