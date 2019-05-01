@@ -46,8 +46,8 @@ protected:
         {
             x = SettingsMenu->Coordinate_x();
             y = SettingsMenu->Coordinate_y();
+            MainMenu->setGeometry(x, y, MainMenu->width(), MainMenu->height());
         }
-        MainMenu->setGeometry(x, y, MainMenu->width(), MainMenu->height());
     }
 public:
     void SetSettingsMenu(Clocks *temp)
@@ -66,6 +66,7 @@ public:
         setWindowFlag(Qt::FramelessWindowHint);
         setAttribute(Qt::WA_TranslucentBackground);
         MainMenu = parent;
+        MainMenu->setGeometry(x, y, MainMenu->width(), MainMenu->height());
         startTimer(1);
     }
 };
