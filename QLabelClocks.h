@@ -10,7 +10,7 @@
 class QLabelClocks : public QLabel
 {
 protected:
-    int red = 255, green = 255, blue = 255, alpha = 80, x = 0, y = 0;
+    int red = 255, green = 255, blue = 255, alpha = 80, x = 0, y = 0, FontSize = 36;
     QString ClocksType = "hh:mm:ss";
     Clocks *SettingsMenu = NULL;
     QPushButton *SettingsButton = NULL;
@@ -39,7 +39,7 @@ protected:
     }
     void changeColor()
     {
-        setStyleSheet("QLabel {color : rgba(" + QString::number(red) + ", " + QString::number(green) + ", " + QString::number(blue) + ", " + QString::number(alpha) + "); font-size:36px}"); //"QLabel {color : rgba(0, 0, 255, value); font-size:36px}"
+        setStyleSheet("QLabel {color : rgba(" + QString::number(red) + ", " + QString::number(green) + ", " + QString::number(blue) + ", " + QString::number(alpha) + "); font-size:" + QString::number(FontSize) + "px}"); //"QLabel {color : rgba(0, 0, 255, value); font-size:36px}"
         SettingsButton->setStyleSheet("QPushButton  {color : rgba(" + QString::number(red) + ", " + QString::number(green) + ", " + QString::number(blue) + ", " + QString::number(alpha) + "); background-color: rgba(" + QString::number(red) + ", " + QString::number(green) + ", " + QString::number(blue) + ", " + QString::number(alpha * 0.35) + "); border: none}");
     }
     void SetSizeAndPos()
@@ -67,7 +67,7 @@ public:
     QLabelClocks(QWidget *parent) :
         QLabel(parent)
     {
-        setStyleSheet("QLabel {color : rgba("+ QString::number(red) +", "+ QString::number(blue) +", "+ QString::number(green) +", "+ QString::number(alpha) +"); font-size:36px}");
+        setStyleSheet("QLabel {color : rgba("+ QString::number(red) +", "+ QString::number(blue) +", "+ QString::number(green) +", "+ QString::number(alpha) +"); font-size:" + QString::number(FontSize) + "px}");
         setWindowFlag(Qt::WindowStaysOnTopHint);
         setWindowFlag(Qt::FramelessWindowHint);
         setAttribute(Qt::WA_TranslucentBackground);
