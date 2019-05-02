@@ -19,12 +19,13 @@ protected:
     {
         if (SettingsMenu)
         {
-            if (red != SettingsMenu->RedValue() || green != SettingsMenu->GreenValue() || blue != SettingsMenu->BlueValue() || alpha != SettingsMenu->AlphaValue() || SettingsMenu->ChangedFont)
+            if (red != SettingsMenu->RedValue() || green != SettingsMenu->GreenValue() || blue != SettingsMenu->BlueValue() || alpha != SettingsMenu->AlphaValue() || SettingsMenu->ChangedFont || FontSize != SettingsMenu->FontSizeValue())
             {
                 red = SettingsMenu->RedValue();
                 green = SettingsMenu->GreenValue();
                 blue = SettingsMenu->BlueValue();
                 alpha = SettingsMenu->AlphaValue();
+                FontSize = SettingsMenu->FontSizeValue();
                 SettingsMenu->ChangedFont = false;
                 changeColor();
             }
