@@ -189,10 +189,18 @@
       <item>
        <layout class="QVBoxLayout" name="verticalLayout_4">
         <item>
-         <widget class="QLineEdit" name="Edit_coordinate_x"/>
+         <widget class="QLineEdit" name="Edit_coordinate_x">
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="Edit_coordinate_y"/>
+         <widget class="QLineEdit" name="Edit_coordinate_y">
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
@@ -213,7 +221,11 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="Edit_FontSize"/>
+         <widget class="QLineEdit" name="Edit_FontSize">
+          <property name="text">
+           <string>36</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
