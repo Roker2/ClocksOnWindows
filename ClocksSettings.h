@@ -20,6 +20,7 @@ public:
     int AlphaValue();
     int Coordinate_x();
     int Coordinate_y();
+    bool ChangedFont = false;
 
 private slots:
     void on_Button_SetWhite_clicked();

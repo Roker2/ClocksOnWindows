@@ -1,8 +1,10 @@
 #ifndef QLABELCLOCKS_H
 #define QLABELCLOCKS_H
+#include <QApplication>
 #include <QLabel>
 #include <QTime>
 #include <QPushButton>
+#include <QFont>
 #include "ClocksSettings.h"
 
 class QLabelClocks : public QLabel
@@ -17,12 +19,13 @@ protected:
     {
         if (SettingsMenu)
         {
-            if (red != SettingsMenu->RedValue() || green != SettingsMenu->GreenValue() || blue != SettingsMenu->BlueValue() || alpha != SettingsMenu->AlphaValue())
+            if (red != SettingsMenu->RedValue() || green != SettingsMenu->GreenValue() || blue != SettingsMenu->BlueValue() || alpha != SettingsMenu->AlphaValue() || SettingsMenu->ChangedFont)
             {
                 red = SettingsMenu->RedValue();
                 green = SettingsMenu->GreenValue();
                 blue = SettingsMenu->BlueValue();
                 alpha = SettingsMenu->AlphaValue();
+                SettingsMenu->ChangedFont = false;
                 changeColor();
             }
         }

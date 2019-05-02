@@ -1,5 +1,6 @@
 #include "ClocksSettings.h"
 #include "ui_ClocksSettings.h"
+#include <QFont>
 
 Clocks::Clocks(QWidget *parent) :
     QWidget(parent),
@@ -67,4 +68,5 @@ int Clocks::Coordinate_y()
 void Clocks::on_fontComboBox_currentFontChanged(const QFont &f)
 {
     QApplication::setFont(f);
+    ChangedFont = true;
 }
