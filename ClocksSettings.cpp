@@ -67,7 +67,7 @@ int Clocks::Coordinate_y()
 
 int Clocks::FontSizeValue()
 {
-    return ui->Edit_FontSize->text().toInt();
+    return ui->Slider_FontSize->value();
 }
 
 void Clocks::on_fontComboBox_currentFontChanged(const QFont &f)
