@@ -26,8 +26,8 @@
      <rect>
       <x>0</x>
       <y>20</y>
-      <width>90</width>
-      <height>32</height>
+      <width>70</width>
+      <height>25</height>
      </rect>
     </property>
     <property name="styleSheet">

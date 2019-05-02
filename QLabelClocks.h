@@ -26,6 +26,7 @@ protected:
                 blue = SettingsMenu->BlueValue();
                 alpha = SettingsMenu->AlphaValue();
                 FontSize = SettingsMenu->FontSizeValue();
+                SettingsButton->setGeometry(SettingsButton->x(), 20 * FontSize / 36, 70 * FontSize / 36, 25 * FontSize / 36);
                 SettingsMenu->ChangedFont = false;
                 changeColor();
             }
@@ -52,7 +53,7 @@ protected:
             {
                 x = SettingsMenu->Coordinate_x();
                 y = SettingsMenu->Coordinate_y();
-                MainMenu->setGeometry(x, y, MainMenu->width(), height() + 60);
+                MainMenu->setGeometry(x, y, MainMenu->width(), height() + 24 + FontSize);
             }
         }
     }
@@ -73,7 +74,7 @@ public:
         setWindowFlag(Qt::FramelessWindowHint);
         setAttribute(Qt::WA_TranslucentBackground);
         MainMenu = parent;
-        MainMenu->setGeometry(x, y, MainMenu->width(), height() + 60);
+        MainMenu->setGeometry(x, y, MainMenu->width(), height() + 24 + FontSize);
         startTimer(1);
     }
 };
