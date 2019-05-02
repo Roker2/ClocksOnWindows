@@ -20,6 +20,7 @@ public:
     int AlphaValue();
     int Coordinate_x();
     int Coordinate_y();
+    int FontSizeValue();
     bool ChangedFont = false;
 
 private slots:

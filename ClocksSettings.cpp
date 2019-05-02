@@ -65,6 +65,11 @@ int Clocks::Coordinate_y()
     return ui->Edit_coordinate_y->text().toInt();
 }
 
+int Clocks::FontSizeValue()
+{
+    return ui->Edit_FontSize->text().toInt();
+}
+
 void Clocks::on_fontComboBox_currentFontChanged(const QFont &f)
 {
     QApplication::setFont(f);
