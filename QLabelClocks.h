@@ -26,7 +26,7 @@ protected:
                 blue = SettingsMenu->BlueValue();
                 alpha = SettingsMenu->AlphaValue();
                 FontSize = SettingsMenu->FontSizeValue();
-                SettingsButton->setGeometry(SettingsButton->x(), 20 * FontSize / 36, 70 * FontSize / 36, 25 * FontSize / 36);
+                SettingsButton->setGeometry(SettingsButton->x(), 22 + 11 * FontSize / 36, 70 * FontSize / 36, 25 * FontSize / 36);
                 SettingsMenu->ChangedFont = false;
                 changeColor();
             }
