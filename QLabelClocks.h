@@ -58,7 +58,7 @@ protected:
     }
     void SetSizeAndPos()
     {
-        setGeometry(0, 0, width()*1.5, height());
+        setGeometry(0, 0, LengthLabel(), height());
         if (SettingsMenu)
         {
             if (x != SettingsMenu->Coordinate_x() || y != SettingsMenu->Coordinate_y())
