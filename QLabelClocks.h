@@ -1,6 +1,5 @@
 #ifndef QLABELCLOCKS_H
 #define QLABELCLOCKS_H
-#include <QApplication>
 #include <QLabel>
 #include <QTime>
 #include <QPushButton>
