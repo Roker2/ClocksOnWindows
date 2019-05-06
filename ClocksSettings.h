@@ -2,6 +2,7 @@
 #define CLOCKS_H
 
 #include <QWidget>
+#include <QString>
 
 namespace Ui {
 class Clocks;
@@ -21,6 +22,7 @@ public:
     int Coordinate_x();
     int Coordinate_y();
     int FontSizeValue();
+    int ClocksWidth;
     bool ChangedFont = false;
 
 private slots:
@@ -31,6 +33,14 @@ private slots:
     void on_Button_SetBlack_clicked();
 
     void on_fontComboBox_currentFontChanged(const QFont &f);
+
+    void on_Button_RightUp_clicked();
+
+    void on_Button_RightDown_clicked();
+
+    void on_Button_LeftDown_clicked();
+
+    void on_Button_LeftUp_clicked();
 
 private:
     Ui::Clocks *ui;

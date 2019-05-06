@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>440</width>
-    <height>248</height>
+    <height>325</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -241,6 +241,54 @@
          </widget>
         </item>
        </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>-2</x>
+     <y>247</y>
+     <width>211</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_6">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_7">
+      <item>
+       <widget class="QPushButton" name="Button_LeftUp">
+        <property name="text">
+         <string>Left Up</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="Button_RightUp">
+        <property name="text">
+         <string>Right Up</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_6">
+      <item>
+       <widget class="QPushButton" name="Button_LeftDown">
+        <property name="text">
+         <string>Left Down</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="Button_RightDown">
+        <property name="text">
+         <string>Right Down</string>
+        </property>
+       </widget>
       </item>
      </layout>
     </item>

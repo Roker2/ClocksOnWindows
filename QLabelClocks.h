@@ -9,7 +9,7 @@
 class QLabelClocks : public QLabel
 {
 protected:
-    int red = 255, green = 255, blue = 255, alpha = 80, x = 0, y = 0, FontSize = 36, pluswidth = 13;
+    int red = 255, green = 255, blue = 255, alpha = 80, x = 0, y = 0, FontSize = 36, pluswidth = -7;
     QString ClocksType = "hh:mm:ss";
     Clocks *SettingsMenu = NULL;
     QPushButton *SettingsButton = NULL;
@@ -23,6 +23,7 @@ protected:
             temp += FontInfo.leftBearing('0');
             temp += FontInfo.rightBearing('0');
         }
+        SettingsMenu->ClocksWidth = temp;
         return temp;
     }
     virtual void timerEvent(QTimerEvent*)
