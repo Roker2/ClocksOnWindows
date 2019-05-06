@@ -10,7 +10,7 @@
 class QLabelClocks : public QLabel
 {
 protected:
-    int red = 255, green = 255, blue = 255, alpha = 80, x = 0, y = 0, FontSize = 36;
+    int red = 255, green = 255, blue = 255, alpha = 80, x = 0, y = 0, FontSize = 36, pluswidth = 13;
     QString ClocksType = "hh:mm:ss";
     Clocks *SettingsMenu = NULL;
     QPushButton *SettingsButton = NULL;
@@ -39,7 +39,7 @@ protected:
                 FontSize = SettingsMenu->FontSizeValue();
                 SettingsButton->setGeometry(SettingsButton->x(), 22 + 11 * FontSize / 36, 70 * FontSize / 36, 25 * FontSize / 36);
                 SettingsMenu->ChangedFont = false;
-                MainMenu->setGeometry(x, y, LengthLabel(), height() + 24 + FontSize);
+                MainMenu->setGeometry(x, y, LengthLabel(), height() + FontSize + pluswidth);
                 changeColor();
             }
         }
@@ -65,7 +65,7 @@ protected:
             {
                 x = SettingsMenu->Coordinate_x();
                 y = SettingsMenu->Coordinate_y();
-                MainMenu->setGeometry(x, y, LengthLabel(), height() + 24 + FontSize);
+                MainMenu->setGeometry(x, y, LengthLabel(), height() + FontSize + pluswidth);
             }
         }
     }
@@ -87,7 +87,7 @@ public:
         setAttribute(Qt::WA_TranslucentBackground);
         MainMenu = parent;
         QFontMetrics FontInfo(fontMetrics());
-        MainMenu->setGeometry(x, y, width() + (FontInfo.width('0') + FontInfo.rightBearing('0') + FontInfo.leftBearing('0')) * 6 + (FontInfo.rightBearing(':') + FontInfo.leftBearing(':')) * 2, height() + 24 + FontSize);
+        MainMenu->setGeometry(x, y, width() + (FontInfo.width('0') + FontInfo.rightBearing('0') + FontInfo.leftBearing('0')) * 6 + (FontInfo.rightBearing(':') + FontInfo.leftBearing(':')) * 2, height() + FontSize + pluswidth);
         startTimer(1);
     }
 };
