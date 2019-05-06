@@ -1,6 +1,5 @@
 #include "ClocksSettings.h"
 #include "ui_ClocksSettings.h"
-#include <QFont>
 
 Clocks::Clocks(QWidget *parent) :
     QWidget(parent),

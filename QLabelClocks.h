@@ -1,10 +1,8 @@
 #ifndef QLABELCLOCKS_H
 #define QLABELCLOCKS_H
-#include <QApplication>
 #include <QLabel>
 #include <QTime>
 #include <QPushButton>
-#include <QFont>
 #include "ClocksSettings.h"
 
 class QLabelClocks : public QLabel
