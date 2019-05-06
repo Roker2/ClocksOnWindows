@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>232</width>
-    <height>119</height>
+    <height>87</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -39,11 +39,6 @@ border: none;</string>
      <string>Settings</string>
     </property>
    </widget>
-  </widget>
-  <widget class="QStatusBar" name="statusBar">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="enabled">
