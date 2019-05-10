@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QString>
+#include <QDesktopWidget>
 
 namespace Ui {
 class Clocks;
