@@ -24,4 +24,4 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # Input
 HEADERS += ClocksSettings.h mainwindow.h QLabelClocks.h
 FORMS += ClocksSettings.ui mainwindow.ui
-SOURCES += ClocksSettings.cpp main.cpp mainwindow.cpp
+SOURCES += ClocksSettings.cpp main.cpp mainwindow.cpp QLabelClocks.cpp
