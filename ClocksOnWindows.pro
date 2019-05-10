@@ -25,3 +25,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 HEADERS += ClocksSettings.h mainwindow.h QLabelClocks.h
 FORMS += ClocksSettings.ui mainwindow.ui
 SOURCES += ClocksSettings.cpp main.cpp mainwindow.cpp QLabelClocks.cpp
+
+#Program Information
+VERSION = 0.3.0
+QMAKE_TARGET_PRODUCT = Clocks on windows
+QMAKE_TARGET_DESCRIPTION = Program by Roker2 (Dmitry Minko)
