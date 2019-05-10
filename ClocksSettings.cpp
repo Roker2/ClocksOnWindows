@@ -77,20 +77,23 @@ void Clocks::on_fontComboBox_currentFontChanged(const QFont &f)
 
 void Clocks::on_Button_RightUp_clicked()
 {
-    ui->Edit_coordinate_x->setText(QString::number(1920 - ClocksWidth));
+    QDesktopWidget temp;
+    ui->Edit_coordinate_x->setText(QString::number(WidthScreen - ClocksWidth));
     ui->Edit_coordinate_y->setText("0");
 }
 
 void Clocks::on_Button_RightDown_clicked()
 {
-    ui->Edit_coordinate_x->setText(QString::number(1920 - ClocksWidth));
-    ui->Edit_coordinate_y->setText(QString::number(1080 - FontSizeValue()));
+    QDesktopWidget temp;
+    ui->Edit_coordinate_x->setText(QString::number(WidthScreen - ClocksWidth));
+    ui->Edit_coordinate_y->setText(QString::number(HeightScreen - FontSizeValue()));
 }
 
 void Clocks::on_Button_LeftDown_clicked()
 {
+    QDesktopWidget temp;
     ui->Edit_coordinate_x->setText("0");
-    ui->Edit_coordinate_y->setText(QString::number(1080 - FontSizeValue()));
+    ui->Edit_coordinate_y->setText(QString::number(HeightScreen - FontSizeValue()));
 }
 
 void Clocks::on_Button_LeftUp_clicked()

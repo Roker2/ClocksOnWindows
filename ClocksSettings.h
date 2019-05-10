@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QString>
+#include <QDesktopWidget>
 
 namespace Ui {
 class Clocks;
@@ -23,6 +24,8 @@ public:
     int Coordinate_y();
     int FontSizeValue();
     int ClocksWidth;
+    int WidthScreen;
+    int HeightScreen;
     bool ChangedFont = false;
 
 private slots:
