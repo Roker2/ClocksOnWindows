@@ -22,6 +22,7 @@ public:
     int Coordinate_x();
     int Coordinate_y();
     int FontSizeValue();
+    int FontSizeMax();
     int ClocksWidth;
     bool ChangedFont = false;
 

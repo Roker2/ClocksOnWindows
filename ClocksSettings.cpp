@@ -68,6 +68,11 @@ int Clocks::FontSizeValue()
 {
     return ui->Slider_FontSize->value();
 }
+int Clocks::FontSizeMax()
+{
+    return ui->Slider_FontSize->maximum();
+}
+
 
 void Clocks::on_fontComboBox_currentFontChanged(const QFont &f)
 {
