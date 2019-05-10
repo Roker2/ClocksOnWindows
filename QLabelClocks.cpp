@@ -24,7 +24,7 @@ void QLabelClocks::timerEvent(QTimerEvent*)
             blue = SettingsMenu->BlueValue();
             alpha = SettingsMenu->AlphaValue();
             FontSize = SettingsMenu->FontSizeValue();
-            SettingsButton->setGeometry(SettingsButton->x(), 22 + 11 * FontSize / 36, 70 * FontSize / 36, 25 * FontSize / 36);
+            SettingsButton->setGeometry(SettingsButton->x(), 22 + 11 * FontSize / SettingsMenu->FontSizeMax(), 70 * FontSize / SettingsMenu->FontSizeMax(), 25 * FontSize / SettingsMenu->FontSizeMax());
             SettingsMenu->ChangedFont = false;
             MainMenu->setGeometry(x, y, LengthLabel(), height() + FontSize + pluswidth);
             changeColor();
