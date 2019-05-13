@@ -1,6 +1,6 @@
 #include "QTimeAlarm.h"
 
-QTimeAlarm::QTimeAlarm(QObject *parent, QLabelClocks *Clocks) : QObject(parent)
+QTimeAlarm::QTimeAlarm(QWidget *parent, QLabelClocks *Clocks) : QObject(parent)
 {
     LabelClocks = Clocks;
     startTimer(1);

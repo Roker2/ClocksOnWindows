@@ -2,6 +2,8 @@
 #define QTIMEALARM_H
 
 #include <QObject>
+#include <QMessageBox>
+#include <QWidget>
 #include "QLabelClocks.h"
 #include "ClocksSettings.h"
 
@@ -9,7 +11,7 @@ class QTimeAlarm : public QObject
 {
     Q_OBJECT
 public:
-    explicit QTimeAlarm(QObject *parent = nullptr, QLabelClocks *Clocks = NULL);
+    explicit QTimeAlarm(QWidget *parent = nullptr, QLabelClocks *Clocks = NULL);
     void SetSettingsMenu(Clocks *temp);
 
 protected:
