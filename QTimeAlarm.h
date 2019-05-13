@@ -9,6 +9,9 @@ class QTimeAlarm : public QObject
 public:
     explicit QTimeAlarm(QObject *parent = nullptr);
 
+protected:
+    virtual void timerEvent(QTimerEvent*);
+
 signals:
 
 public slots:

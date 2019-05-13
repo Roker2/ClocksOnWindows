@@ -4,3 +4,8 @@ QTimeAlarm::QTimeAlarm(QObject *parent) : QObject(parent)
 {
 
 }
+
+void QTimeAlarm::timerEvent(QTimerEvent *)
+{
+
+}
