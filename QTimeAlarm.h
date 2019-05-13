@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include "QLabelClocks.h"
+#include "ClocksSettings.h"
 
 class QTimeAlarm : public QObject
 {
@@ -13,6 +14,7 @@ public:
 protected:
     virtual void timerEvent(QTimerEvent*);
     QLabelClocks *LabelClocks = NULL;
+    Clocks *SeetingsMenu;
 
 signals:
 
