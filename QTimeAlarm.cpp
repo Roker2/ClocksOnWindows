@@ -3,7 +3,7 @@
 QTimeAlarm::QTimeAlarm(QObject *parent, QLabelClocks *Clocks) : QObject(parent)
 {
     LabelClocks = Clocks;
-    startTimer(1000);
+    startTimer(1);
 }
 
 void QTimeAlarm::timerEvent(QTimerEvent *)

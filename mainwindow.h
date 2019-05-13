@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "QLabelClocks.h"
+#include "QTimeAlarm.h"
 
 namespace Ui {
 class MainWindow;
@@ -16,6 +17,7 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     QLabelClocks *LabelClocks;
+    QTimeAlarm *TimeAlarm;
 
 private:
     Ui::MainWindow *ui;

@@ -35,7 +35,6 @@ void QLabelClocks::timerEvent(QTimerEvent*)
     {
         changeColor();
     }
-    SetCurrentTime();
     SetSizeAndPos();
     if (SettingsMenu->AlarmState)
     {

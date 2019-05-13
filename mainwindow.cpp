@@ -11,6 +11,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->Button_Open_Settings, SIGNAL(clicked()), Settings, SLOT(show()));
     LabelClocks->SetSettingsMenu(Settings);
     LabelClocks->SetSettingsButton(ui->Button_Open_Settings);
+    TimeAlarm = new QTimeAlarm(this, LabelClocks);
 }
 
 MainWindow::~MainWindow()
