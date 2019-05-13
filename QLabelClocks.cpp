@@ -35,12 +35,11 @@ void QLabelClocks::timerEvent(QTimerEvent*)
     {
         changeColor();
     }
-    QTime time = QTime::currentTime();
-    setText(time.toString(ClocksType));
+    setText(QTime::currentTime().toString(ClocksType));
     SetSizeAndPos();
     if (SettingsMenu->AlarmState)
     {
-        if (time == SettingsMenu->AlarmTime())
+        if (QTime::currentTime() == SettingsMenu->AlarmTime())
         {
             QMessageBox::information(parentWidget(), "Tutturu!", "Alarm");
             SettingsMenu->DisableAlarm();
