@@ -26,11 +26,13 @@ public:
     int FontSizeValue();
     int FontSizeMax();
     QTime AlarmTime();
-    void EnableAlarm();
     void DisableAlarm();
     int ClocksWidth;
     bool ChangedFont = false;
     bool AlarmState = false;
+
+protected:
+    void EnableAlarm();
 
 private slots:
     void on_Button_SetWhite_clicked();
