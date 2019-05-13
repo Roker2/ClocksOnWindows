@@ -10,3 +10,8 @@ void QTimeAlarm::timerEvent(QTimerEvent *)
 {
     LabelClocks->SetCurrentTime();
 }
+
+void QTimeAlarm::SetSettingsMenu(Clocks *temp)
+{
+    SettingsMenu = temp;
+}

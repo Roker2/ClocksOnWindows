@@ -10,11 +10,12 @@ class QTimeAlarm : public QObject
     Q_OBJECT
 public:
     explicit QTimeAlarm(QObject *parent = nullptr, QLabelClocks *Clocks = NULL);
+    void SetSettingsMenu(Clocks *temp);
 
 protected:
     virtual void timerEvent(QTimerEvent*);
     QLabelClocks *LabelClocks;
-    Clocks *SeetingsMenu;
+    Clocks *SettingsMenu;
 
 signals:
 
