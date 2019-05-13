@@ -2,15 +2,17 @@
 #define QTIMEALARM_H
 
 #include <QObject>
+#include "QLabelClocks.h"
 
 class QTimeAlarm : public QObject
 {
     Q_OBJECT
 public:
-    explicit QTimeAlarm(QObject *parent = nullptr);
+    explicit QTimeAlarm(QObject *parent = nullptr, QLabelClocks *Clocks);
 
 protected:
     virtual void timerEvent(QTimerEvent*);
+    QLabelClocks *LabelClocks = NULL;
 
 signals:
 
