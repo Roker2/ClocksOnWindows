@@ -13,7 +13,7 @@ public:
 
 protected:
     virtual void timerEvent(QTimerEvent*);
-    QLabelClocks *LabelClocks = NULL;
+    QLabelClocks *LabelClocks;
     Clocks *SeetingsMenu;
 
 signals:
