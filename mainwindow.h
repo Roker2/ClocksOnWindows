@@ -16,6 +16,8 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
+protected:
     QLabelClocks *LabelClocks;
     QTimeAlarm *TimeAlarm;
 
