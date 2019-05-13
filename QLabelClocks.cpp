@@ -36,6 +36,8 @@ void QLabelClocks::timerEvent(QTimerEvent*)
         changeColor();
     }
     QTime time = QTime::currentTime();
+    setText(time.toString(ClocksType));
+    SetSizeAndPos();
     if (SettingsMenu->AlarmState)
     {
         if (time == SettingsMenu->AlarmTime())
@@ -44,8 +46,6 @@ void QLabelClocks::timerEvent(QTimerEvent*)
             SettingsMenu->DisableAlarm();
         }
     }
-    setText(time.toString(ClocksType));
-    SetSizeAndPos();
 }
 
 void QLabelClocks::changeColor()
