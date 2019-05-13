@@ -22,6 +22,7 @@ protected:
 public:
     void SetSettingsMenu(Clocks *temp);
     void SetSettingsButton(QPushButton *temp);
+    void SetCurrentTime();
     QLabelClocks(QWidget *parent);
 };
 

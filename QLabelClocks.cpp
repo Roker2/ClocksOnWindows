@@ -35,7 +35,7 @@ void QLabelClocks::timerEvent(QTimerEvent*)
     {
         changeColor();
     }
-    setText(QTime::currentTime().toString(ClocksType));
+    SetCurrentTime();
     SetSizeAndPos();
     if (SettingsMenu->AlarmState)
     {
@@ -75,6 +75,11 @@ void QLabelClocks::SetSettingsMenu(Clocks *temp)
 void QLabelClocks::SetSettingsButton(QPushButton *temp)
 {
     SettingsButton = temp;
+}
+
+void QLabelClocks::SetCurrentTime()
+{
+    setText(QTime::currentTime().toString(ClocksType));
 }
 
 QLabelClocks::QLabelClocks(QWidget *parent) :
