@@ -1,4 +1,5 @@
 #include "QLabelClocks.h"
+#include <QMessageBox>
 
 int QLabelClocks::LengthLabel()
 {
@@ -35,6 +36,14 @@ void QLabelClocks::timerEvent(QTimerEvent*)
         changeColor();
     }
     QTime time = QTime::currentTime();
+    if (SettingsMenu->AlarmState)
+    {
+        if (time == SettingsMenu->AlarmTime())
+        {
+            QMessageBox::information(parentWidget(), "Tutturu!", "Alarm");
+            SettingsMenu->DisableAlarm();
+        }
+    }
     setText(time.toString(ClocksType));
     SetSizeAndPos();
 }
