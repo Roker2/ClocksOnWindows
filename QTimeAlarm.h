@@ -8,7 +8,7 @@ class QTimeAlarm : public QObject
 {
     Q_OBJECT
 public:
-    explicit QTimeAlarm(QObject *parent = nullptr, QLabelClocks *Clocks);
+    explicit QTimeAlarm(QObject *parent = nullptr, QLabelClocks *Clocks = NULL);
 
 protected:
     virtual void timerEvent(QTimerEvent*);
