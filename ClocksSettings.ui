@@ -246,7 +246,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>-2</x>
@@ -291,6 +291,32 @@
        </widget>
       </item>
      </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>215</x>
+     <y>249</y>
+     <width>119</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_7">
+    <item>
+     <widget class="QTimeEdit" name="timeEdit_Alarm">
+      <property name="displayFormat">
+       <string>hh:mm:ss</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="Button_Enable_Disable_Alarm">
+      <property name="text">
+       <string>Enable Alarm</string>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>

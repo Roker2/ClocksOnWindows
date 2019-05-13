@@ -103,3 +103,32 @@ void Clocks::on_Button_LeftUp_clicked()
     ui->Edit_coordinate_x->setText("0");
     ui->Edit_coordinate_y->setText("0");
 }
+
+QTime Clocks::AlarmTime()
+{
+    return ui->timeEdit_Alarm->time();
+}
+
+void Clocks::EnableAlarm()
+{
+    ui->Button_Enable_Disable_Alarm->setText("Disable Alarm");
+    AlarmState = true;
+}
+
+void Clocks::DisableAlarm()
+{
+    ui->Button_Enable_Disable_Alarm->setText("Enable Alarm");
+    AlarmState = false;
+}
+
+void Clocks::on_Button_Enable_Disable_Alarm_clicked()
+{
+    if(!AlarmState)
+    {
+        EnableAlarm();
+    }
+    else
+    {
+        DisableAlarm();
+    }
+}

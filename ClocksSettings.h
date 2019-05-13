@@ -4,6 +4,7 @@
 #include <QWidget>
 #include <QString>
 #include <QDesktopWidget>
+#include <QTime>
 
 namespace Ui {
 class Clocks;
@@ -24,8 +25,12 @@ public:
     int Coordinate_y();
     int FontSizeValue();
     int FontSizeMax();
+    QTime AlarmTime();
+    void EnableAlarm();
+    void DisableAlarm();
     int ClocksWidth;
     bool ChangedFont = false;
+    bool AlarmState = false;
 
 private slots:
     void on_Button_SetWhite_clicked();
@@ -43,6 +48,8 @@ private slots:
     void on_Button_LeftDown_clicked();
 
     void on_Button_LeftUp_clicked();
+
+    void on_Button_Enable_Disable_Alarm_clicked();
 
 private:
     Ui::Clocks *ui;
