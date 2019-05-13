@@ -9,6 +9,14 @@ QTimeAlarm::QTimeAlarm(QObject *parent, QLabelClocks *Clocks) : QObject(parent)
 void QTimeAlarm::timerEvent(QTimerEvent *)
 {
     LabelClocks->SetCurrentTime();
+    if (SettingsMenu->AlarmState)
+    {
+        if (QTime::currentTime() == SettingsMenu->AlarmTime())
+        {
+            QMessageBox::information(nullptr, "Tutturu!", "Alarm");
+            SettingsMenu->DisableAlarm();
+        }
+    }
 }
 
 void QTimeAlarm::SetSettingsMenu(Clocks *temp)
