@@ -22,9 +22,11 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 # Input
-HEADERS += ClocksSettings.h mainwindow.h QLabelClocks.h
+HEADERS += ClocksSettings.h mainwindow.h QLabelClocks.h \
+    QTimeAlarm.h
 FORMS += ClocksSettings.ui mainwindow.ui
-SOURCES += ClocksSettings.cpp main.cpp mainwindow.cpp QLabelClocks.cpp
+SOURCES += ClocksSettings.cpp main.cpp mainwindow.cpp QLabelClocks.cpp \
+    QTimeAlarm.cpp
 
 #Program Information
 VERSION = 0.3.0
