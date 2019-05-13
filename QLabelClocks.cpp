@@ -1,5 +1,4 @@
 #include "QLabelClocks.h"
-#include <QMessageBox>
 
 int QLabelClocks::LengthLabel()
 {

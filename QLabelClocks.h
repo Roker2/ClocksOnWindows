@@ -4,6 +4,7 @@
 #include <QTime>
 #include <QPushButton>
 #include <QFontMetrics>
+#include <QMessageBox>
 #include "ClocksSettings.h"
 
 class QLabelClocks : public QLabel
