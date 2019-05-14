@@ -29,10 +29,10 @@ public:
     bool GetAlarmState();
     int ClocksWidth;
     bool ChangedFont = false;
-    bool AlarmState = false;
 
 protected:
     void EnableAlarm();
+    bool AlarmState = false;
 
 private slots:
     void on_Button_SetWhite_clicked();
