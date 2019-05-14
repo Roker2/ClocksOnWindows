@@ -13,7 +13,7 @@ void QTimeAlarm::timerEvent(QTimerEvent *)
     {
         if (QTime::currentTime().toString("hh:mm:ss") == SettingsMenu->AlarmTime().toString("hh:mm:ss"))
         {
-            QMessageBox::information(nullptr, "Tutturu!", "Alarm");
+            QMessageBox::information(nullptr, "Alarm", "Tutturu!");
             SettingsMenu->DisableAlarm();
         }
     }
