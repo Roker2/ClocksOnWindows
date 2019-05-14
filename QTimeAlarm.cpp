@@ -9,7 +9,7 @@ QTimeAlarm::QTimeAlarm(QObject *parent, QLabelClocks *Clocks) : QObject(parent)
 void QTimeAlarm::timerEvent(QTimerEvent *)
 {
     LabelClocks->SetCurrentTime();
-    if (SettingsMenu->AlarmState)
+    if (SettingsMenu->GetAlarmState())
     {
         if (QTime::currentTime().toString("hh:mm:ss") == SettingsMenu->AlarmTime().toString("hh:mm:ss"))
         {
