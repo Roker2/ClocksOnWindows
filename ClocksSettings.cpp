@@ -132,3 +132,8 @@ void Clocks::on_Button_Enable_Disable_Alarm_clicked()
         DisableAlarm();
     }
 }
+
+bool Clocks::GetAlarmState()
+{
+    return AlarmState;
+}

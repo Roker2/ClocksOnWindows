@@ -26,6 +26,7 @@ public:
     int FontSizeMax();
     QTime AlarmTime();
     void DisableAlarm();
+    bool GetAlarmState();
     int ClocksWidth;
     bool ChangedFont = false;
     bool AlarmState = false;
