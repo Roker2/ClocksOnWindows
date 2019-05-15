@@ -2,6 +2,10 @@
 #define QTIMEALARM_H
 
 #include <QObject>
+#include <QMediaPlayer>
+#include <QMediaPlaylist>
+#include <QDir>
+#include <QUrl>
 #include "QLabelClocks.h"
 #include "ClocksSettings.h"
 
