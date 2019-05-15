@@ -15,7 +15,6 @@ void QTimeAlarm::timerEvent(QTimerEvent *)
         {
             QMediaPlayer *AlarmPlayer = new QMediaPlayer;
             QMediaPlaylist *AlarmMusic = new QMediaPlaylist;
-            QDir CurrentDir = QDir::current();
             AlarmMusic->addMedia(QUrl::fromLocalFile(QDir::toNativeSeparators(QDir::current().path() + "/sounds/AlarmMusic.mp3")));
             AlarmMusic->setPlaybackMode(QMediaPlaylist::Loop);
             AlarmPlayer->setPlaylist(AlarmMusic);
