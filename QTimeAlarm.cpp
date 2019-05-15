@@ -21,7 +21,7 @@ void QTimeAlarm::timerEvent(QTimerEvent *)
             AlarmPlayer->setPlaylist(AlarmMusic);
             AlarmPlayer->setVolume(100);
             AlarmPlayer->play();
-            QMessageBox::information(nullptr, "Alarm", "Tutturu!");
+            QMessageBox::information(nullptr, "Alarm", "Current time is " + QTime::currentTime().toString("hh:mm:ss"));
             SettingsMenu->DisableAlarm();
             AlarmPlayer->stop();
             delete AlarmPlayer;
