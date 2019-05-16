@@ -27,6 +27,7 @@ public:
     QTime AlarmTime();
     void DisableAlarm();
     bool GetAlarmState();
+    QString GetTypeClocks();
     int ClocksWidth;
     bool ChangedFont = false;
 

@@ -320,6 +320,32 @@
     </item>
    </layout>
   </widget>
+  <widget class="QLineEdit" name="Edit_ClocksType">
+   <property name="geometry">
+    <rect>
+     <x>324</x>
+     <y>291</y>
+     <width>81</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>hh:mm:ss</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>329</x>
+     <y>259</y>
+     <width>71</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Clocks Type</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

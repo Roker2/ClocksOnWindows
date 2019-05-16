@@ -137,3 +137,8 @@ bool Clocks::GetAlarmState()
 {
     return AlarmState;
 }
+
+QString Clocks::GetTypeClocks()
+{
+    return ui->Edit_ClocksType->text();
+}

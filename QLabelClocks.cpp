@@ -29,6 +29,11 @@ void QLabelClocks::timerEvent(QTimerEvent*)
             MainMenu->setGeometry(x, y, LengthLabel(), height() + FontSize + pluswidth);
             changeColor();
         }
+        if (ClocksType != SettingsMenu->GetTypeClocks())
+        {
+            ClocksType = SettingsMenu->GetTypeClocks();
+            SetCurrentTime();
+        }
     }
     SetSizeAndPos();
 }
