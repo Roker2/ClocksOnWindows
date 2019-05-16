@@ -30,10 +30,6 @@ void QLabelClocks::timerEvent(QTimerEvent*)
             changeColor();
         }
     }
-    else
-    {
-        changeColor();
-    }
     SetSizeAndPos();
 }
 
