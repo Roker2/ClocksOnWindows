@@ -87,5 +87,5 @@ QLabelClocks::QLabelClocks(QWidget *parent) :
     MainMenu = parent;
     QFontMetrics FontInfo(fontMetrics());
     MainMenu->setGeometry(x, y, width() + (FontInfo.width('0') + FontInfo.rightBearing('0') + FontInfo.leftBearing('0')) * 6 + (FontInfo.rightBearing(':') + FontInfo.leftBearing(':')) * 2, height() + FontSize + pluswidth);
-    startTimer(1);
+    startTimer(100);
 }
