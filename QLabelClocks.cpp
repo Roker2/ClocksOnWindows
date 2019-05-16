@@ -72,6 +72,11 @@ void QLabelClocks::SetCurrentTime()
     setText(QTime::currentTime().toString(ClocksType));
 }
 
+void QLabelClocks::SetTypeClocks(QString type)
+{
+    ClocksType = type;
+}
+
 QLabelClocks::QLabelClocks(QWidget *parent) :
     QLabel(parent)
 {
