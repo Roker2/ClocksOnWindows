@@ -20,6 +20,7 @@ protected:
     virtual void timerEvent(QTimerEvent*);
     void EnableMusic();
     void DisableMusic();
+    void SetClocks();
     QLabelClocks *LabelClocks;
     Clocks *SettingsMenu;
     QMediaPlayer *AlarmPlayer;
