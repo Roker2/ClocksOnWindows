@@ -18,12 +18,12 @@ public:
 
 protected:
     virtual void timerEvent(QTimerEvent*);
+    void EnableMusic();
+    void DisableMusic();
     QLabelClocks *LabelClocks;
     Clocks *SettingsMenu;
     QMediaPlayer *AlarmPlayer;
     QMediaPlaylist *AlarmMusic;
-    void EnableMusic();
-    void DisableMusic();
     QTime Timer;
     int ValueTimerEvent = 1000;
 
