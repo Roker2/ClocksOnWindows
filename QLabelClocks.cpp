@@ -78,6 +78,11 @@ void QLabelClocks::SetTypeClocks(QString type)
     ClocksType = type;
 }
 
+void QLabelClocks::SetTime(QTime *time)
+{
+    setText(time->toString(ClocksType));
+}
+
 QLabelClocks::QLabelClocks(QWidget *parent) :
     QLabel(parent)
 {

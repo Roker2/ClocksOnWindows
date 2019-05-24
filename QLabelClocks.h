@@ -26,6 +26,7 @@ public:
     void SetCurrentTime();
     void SetTypeClocks(QString type);
     QLabelClocks(QWidget *parent);
+    void SetTime(QTime *time);
 };
 
 #endif // QLABELCLOCKS_H
