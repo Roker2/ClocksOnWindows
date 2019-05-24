@@ -19,6 +19,24 @@ void QTimeAlarm::timerEvent(QTimerEvent *)
             DisableMusic();
         }
     }
+    if(SettingsMenu->TimerWasEnabled)
+    {
+        Timer = SettingsMenu->TimerValue();
+        SettingsMenu->TimerWasEnabled = false;
+    }
+    if(SettingsMenu->GetTimerState())
+    {
+        QTime temp_time(0, 0, 0, 0);
+        SettingsMenu->TimerMinusTime(1000);
+        Timer = Timer.addMSecs(-1000);
+        if (Timer <= temp_time)
+        {
+            EnableMusic();
+            QMessageBox::information(nullptr, "Timer", "Timer over");
+            SettingsMenu->DisableTimer();
+            DisableMusic();
+        }
+    }
 }
 
 void QTimeAlarm::SetSettingsMenu(Clocks *temp)

@@ -24,6 +24,7 @@ protected:
     QMediaPlaylist *AlarmMusic;
     void EnableMusic();
     void DisableMusic();
+    QTime Timer;
 
 signals:
 

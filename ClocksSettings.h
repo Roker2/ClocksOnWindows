@@ -27,13 +27,20 @@ public:
     QTime AlarmTime();
     void DisableAlarm();
     bool GetAlarmState();
+    void DisableTimer();
+    bool GetTimerState();
     QString GetTypeClocks();
+    void TimerMinusTime(int milisecunds);
+    QTime TimerValue();
     int ClocksWidth;
     bool ChangedFont = false;
+    bool TimerWasEnabled = false;
 
 protected:
     void EnableAlarm();
+    void EnableTimer();
     bool AlarmState = false;
+    bool TimerState = false;
 
 private slots:
     void on_Button_SetWhite_clicked();
@@ -53,6 +60,8 @@ private slots:
     void on_Button_LeftUp_clicked();
 
     void on_Button_Enable_Disable_Alarm_clicked();
+
+    void on_Button_Enable_Disable_Timer_clicked();
 
 private:
     Ui::Clocks *ui;

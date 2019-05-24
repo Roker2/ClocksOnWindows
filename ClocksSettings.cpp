@@ -142,3 +142,45 @@ QString Clocks::GetTypeClocks()
 {
     return ui->Edit_ClocksType->text();
 }
+
+void Clocks::on_Button_Enable_Disable_Timer_clicked()
+{
+    if(!TimerState)
+    {
+        EnableTimer();
+    }
+    else
+    {
+        DisableTimer();
+    }
+}
+
+bool Clocks::GetTimerState()
+{
+    return TimerState;
+}
+
+void Clocks::EnableTimer()
+{
+    ui->Button_Enable_Disable_Timer->setText("Disable Timer");
+    TimerState = true;
+    TimerWasEnabled = true;
+    ui->timeEdit_Timer->setReadOnly(true);
+}
+
+void Clocks::DisableTimer()
+{
+    ui->Button_Enable_Disable_Timer->setText("Enable Timer");
+    TimerState = false;
+    ui->timeEdit_Timer->setReadOnly(false);
+}
+
+void Clocks::TimerMinusTime(int milisecunds)
+{
+    ui->timeEdit_Timer->setTime(TimerValue().addMSecs(-milisecunds));
+}
+
+QTime Clocks::TimerValue()
+{
+    return ui->timeEdit_Timer->time();
+}
