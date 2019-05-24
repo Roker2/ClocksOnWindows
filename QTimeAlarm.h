@@ -25,6 +25,7 @@ protected:
     void EnableMusic();
     void DisableMusic();
     QTime Timer;
+    int ValueTimerEvent = 1000;
 
 signals:
 

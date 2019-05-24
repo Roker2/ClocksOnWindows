@@ -3,7 +3,7 @@
 QTimeAlarm::QTimeAlarm(QObject *parent, QLabelClocks *Clocks) : QObject(parent)
 {
     LabelClocks = Clocks;
-    startTimer(1000);
+    startTimer(ValueTimerEvent);
 }
 
 void QTimeAlarm::timerEvent(QTimerEvent *)
@@ -27,8 +27,8 @@ void QTimeAlarm::timerEvent(QTimerEvent *)
     if(SettingsMenu->GetTimerState())
     {
         QTime temp_time(0, 0, 0, 0);
-        SettingsMenu->TimerMinusTime(1000);
-        Timer = Timer.addMSecs(-1000);
+        SettingsMenu->TimerMinusTime(ValueTimerEvent);
+        Timer = Timer.addMSecs(-ValueTimerEvent);
         if (Timer <= temp_time)
         {
             EnableMusic();
