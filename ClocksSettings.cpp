@@ -166,6 +166,7 @@ void Clocks::EnableTimer()
     TimerState = true;
     TimerWasEnabled = true;
     ui->timeEdit_Timer->setReadOnly(true);
+    ui->checkBox_clocks_or_timer->setCheckable(true);
 }
 
 void Clocks::DisableTimer()
@@ -173,6 +174,7 @@ void Clocks::DisableTimer()
     ui->Button_Enable_Disable_Timer->setText("Enable Timer");
     TimerState = false;
     ui->timeEdit_Timer->setReadOnly(false);
+    ui->checkBox_clocks_or_timer->setCheckable(false);
 }
 
 void Clocks::TimerMinusTime(int milisecunds)
@@ -183,4 +185,9 @@ void Clocks::TimerMinusTime(int milisecunds)
 QTime Clocks::TimerValue()
 {
     return ui->timeEdit_Timer->time();
+}
+
+Qt::CheckState Clocks::TimerOrClocks()
+{
+    return ui->checkBox_clocks_or_timer->checkState();
 }

@@ -32,6 +32,7 @@ public:
     QString GetTypeClocks();
     void TimerMinusTime(int milisecunds);
     QTime TimerValue();
+    Qt::CheckState TimerOrClocks();
     int ClocksWidth;
     bool ChangedFont = false;
     bool TimerWasEnabled = false;

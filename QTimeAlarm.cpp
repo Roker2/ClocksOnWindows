@@ -8,7 +8,8 @@ QTimeAlarm::QTimeAlarm(QObject *parent, QLabelClocks *Clocks) : QObject(parent)
 
 void QTimeAlarm::timerEvent(QTimerEvent *)
 {
-    LabelClocks->SetCurrentTime();
+    if(SettingsMenu->TimerOrClocks() == Qt::CheckState())
+        LabelClocks->SetCurrentTime();
     if (SettingsMenu->GetAlarmState())
     {
         if (QTime::currentTime().toString("hh:mm:ss") == SettingsMenu->AlarmTime().toString("hh:mm:ss"))
@@ -37,6 +38,8 @@ void QTimeAlarm::timerEvent(QTimerEvent *)
             DisableMusic();
         }
     }
+    if(SettingsMenu->TimerOrClocks() != Qt::CheckState())
+        LabelClocks->SetTime(&Timer);
 }
 
 void QTimeAlarm::SetSettingsMenu(Clocks *temp)
