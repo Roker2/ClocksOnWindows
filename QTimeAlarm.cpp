@@ -13,18 +13,10 @@ void QTimeAlarm::timerEvent(QTimerEvent *)
     {
         if (QTime::currentTime().toString("hh:mm:ss") == SettingsMenu->AlarmTime().toString("hh:mm:ss"))
         {
-            QMediaPlayer *AlarmPlayer = new QMediaPlayer;
-            QMediaPlaylist *AlarmMusic = new QMediaPlaylist;
-            AlarmMusic->addMedia(QUrl::fromLocalFile(QDir::toNativeSeparators(QDir::current().path() + "/sounds/AlarmMusic.mp3")));
-            AlarmMusic->setPlaybackMode(QMediaPlaylist::Loop);
-            AlarmPlayer->setPlaylist(AlarmMusic);
-            AlarmPlayer->setVolume(100);
-            AlarmPlayer->play();
+            EnableMusic();
             QMessageBox::information(nullptr, "Alarm", "Current time is " + QTime::currentTime().toString("hh:mm:ss"));
             SettingsMenu->DisableAlarm();
-            AlarmPlayer->stop();
-            delete AlarmPlayer;
-            delete AlarmMusic;
+            DisableMusic();
         }
     }
 }
@@ -32,4 +24,22 @@ void QTimeAlarm::timerEvent(QTimerEvent *)
 void QTimeAlarm::SetSettingsMenu(Clocks *temp)
 {
     SettingsMenu = temp;
+}
+
+void QTimeAlarm::EnableMusic()
+{
+    AlarmPlayer = new QMediaPlayer;
+    AlarmMusic = new QMediaPlaylist;
+    AlarmMusic->addMedia(QUrl::fromLocalFile(QDir::toNativeSeparators(QDir::current().path() + "/sounds/AlarmMusic.mp3")));
+    AlarmMusic->setPlaybackMode(QMediaPlaylist::Loop);
+    AlarmPlayer->setPlaylist(AlarmMusic);
+    AlarmPlayer->setVolume(100);
+    AlarmPlayer->play();
+}
+
+void QTimeAlarm::DisableMusic()
+{
+    AlarmPlayer->stop();
+    delete AlarmPlayer;
+    delete AlarmMusic;
 }

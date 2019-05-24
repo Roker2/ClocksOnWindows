@@ -20,6 +20,10 @@ protected:
     virtual void timerEvent(QTimerEvent*);
     QLabelClocks *LabelClocks;
     Clocks *SettingsMenu;
+    QMediaPlayer *AlarmPlayer;
+    QMediaPlaylist *AlarmMusic;
+    void EnableMusic();
+    void DisableMusic();
 
 signals:
 
