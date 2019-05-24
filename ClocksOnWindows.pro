@@ -29,6 +29,6 @@ SOURCES += ClocksSettings.cpp main.cpp mainwindow.cpp QLabelClocks.cpp \
     QTimeAlarm.cpp
 
 #Program Information
-VERSION = 0.4.0
+VERSION = 0.4.1
 QMAKE_TARGET_PRODUCT = Clocks on windows
 QMAKE_TARGET_DESCRIPTION = Program by Roker2 (Dmitry Minko)
