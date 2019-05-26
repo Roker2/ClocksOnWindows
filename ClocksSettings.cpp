@@ -79,7 +79,6 @@ int Clocks::FontSizeMax()
     return ui->Slider_FontSize->maximum();
 }
 
-
 void Clocks::on_fontComboBox_currentFontChanged(const QFont &f)
 {
     QApplication::setFont(f);
