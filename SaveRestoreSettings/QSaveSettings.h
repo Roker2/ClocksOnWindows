@@ -15,6 +15,7 @@ public:
     void SetRedValue(int *value);
     void SetGreenValue(int *value);
     void SetBlueValue(int *value);
+    void SetAlaphaValue(int *value);
     void SetXValue(int *value);
     void SetYValue(int *value);
     void SetClocksTypeValue(QString *value);
@@ -25,6 +26,7 @@ protected:
     int Red = 255;
     int Green = 255;
     int Blue = 255;
+    int Alpha = 80;
     int X = 0;
     int Y = 0;
     int FontSize = 36;
