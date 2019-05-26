@@ -42,6 +42,10 @@ protected:
     void EnableTimer();
     bool AlarmState = false;
     bool TimerState = false;
+    int Red = 255;
+    int Green = 255;
+    int Blue = 255;
+    int Alpha = 80;
 
 private slots:
     void on_Button_SetWhite_clicked();
@@ -63,6 +67,14 @@ private slots:
     void on_Button_Enable_Disable_Alarm_clicked();
 
     void on_Button_Enable_Disable_Timer_clicked();
+
+    void on_Slider_Red_valueChanged(int value);
+
+    void on_Slider_Green_valueChanged(int value);
+
+    void on_Slider_Blue_valueChanged(int value);
+
+    void on_Slider_Transparent_valueChanged(int value);
 
 private:
     Ui::Clocks *ui;

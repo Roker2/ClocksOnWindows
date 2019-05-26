@@ -15,22 +15,22 @@ Clocks::~Clocks()
 
 int Clocks::RedValue()
 {
-    return ui->Slider_Red->value();
+    return Red;
 }
 
 int Clocks::GreenValue()
 {
-    return ui->Slider_Green->value();
+    return Green;
 }
 
 int Clocks::BlueValue()
 {
-    return ui->Slider_Blue->value();
+    return Blue;
 }
 
 int Clocks::AlphaValue()
 {
-    return ui->Slider_Transparent->value();
+    return Alpha;
 }
 
 void Clocks::on_Button_SetWhite_clicked()
@@ -190,4 +190,25 @@ QTime Clocks::TimerValue()
 Qt::CheckState Clocks::TimerOrClocks()
 {
     return ui->checkBox_clocks_or_timer->checkState();
+}
+
+void Clocks::on_Slider_Red_valueChanged(int value)
+{
+    Red = value;
+}
+
+void Clocks::on_Slider_Green_valueChanged(int value)
+{
+    Green = value;
+}
+
+void Clocks::on_Slider_Blue_valueChanged(int value)
+{
+    Blue = value;
+}
+
+
+void Clocks::on_Slider_Transparent_valueChanged(int value)
+{
+    Alpha = value;
 }
