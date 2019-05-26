@@ -48,22 +48,22 @@ void QSaveSettings::SetAlaphaValue(int *value)
     Alpha = (*value);
 }
 
-void QSaveSettings::SetXValue(int *value)
+void QSaveSettings::SetXValue(int value)
 {
-    X = (*value);
+    X = value;
 }
 
-void QSaveSettings::SetYValue(int *value)
+void QSaveSettings::SetYValue(int value)
 {
-    Y = (*value);
+    Y = value;
 }
 
-void QSaveSettings::SetClocksTypeValue(QString *value)
+void QSaveSettings::SetClocksTypeValue(QString value)
 {
-    ClocksType = (*value);
+    ClocksType = value;
 }
 
-void QSaveSettings::SetFontSize(int *value)
+void QSaveSettings::SetFontSize(int value)
 {
-    FontSize = (*value);
+    FontSize = value;
 }

@@ -16,10 +16,10 @@ public:
     void SetGreenValue(int *value);
     void SetBlueValue(int *value);
     void SetAlaphaValue(int *value);
-    void SetXValue(int *value);
-    void SetYValue(int *value);
-    void SetClocksTypeValue(QString *value);
-    void SetFontSize(int *value);
+    void SetXValue(int value);
+    void SetYValue(int value);
+    void SetClocksTypeValue(QString value);
+    void SetFontSize(int value);
     void Save();
 
 protected:
