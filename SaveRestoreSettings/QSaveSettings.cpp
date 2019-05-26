@@ -20,7 +20,7 @@ void QSaveSettings::Save()
     stream << "Red=" << Red << endl;
     stream << "Green=" << Green << endl;
     stream << "Blue=" << Blue << endl;
-    stream << "Alapha=" << Alpha << endl;
+    stream << "Alpha=" << Alpha << endl;
     stream << "X=" << X << endl;
     stream << "Y=" << Y << endl;
     stream << "ClocksType=" << ClocksType << endl;
@@ -43,7 +43,7 @@ void QSaveSettings::SetBlueValue(int *value)
     Blue = (*value);
 }
 
-void QSaveSettings::SetAlaphaValue(int *value)
+void QSaveSettings::SetAlphaValue(int *value)
 {
     Alpha = (*value);
 }

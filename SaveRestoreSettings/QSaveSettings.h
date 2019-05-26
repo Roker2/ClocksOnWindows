@@ -15,7 +15,7 @@ public:
     void SetRedValue(int *value);
     void SetGreenValue(int *value);
     void SetBlueValue(int *value);
-    void SetAlaphaValue(int *value);
+    void SetAlphaValue(int *value);
     void SetXValue(int value);
     void SetYValue(int value);
     void SetClocksTypeValue(QString value);

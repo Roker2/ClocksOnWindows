@@ -23,7 +23,7 @@ void QRestoreSettings::Restore()
                 Green = list.at(1).toInt();
             else if(list.at(0) == "Blue")
                 Blue = list.at(1).toInt();
-            else if(list.at(0) == "Alapha")
+            else if(list.at(0) == "Alpha")
                 Alpha = list.at(1).toInt();
             else if(list.at(0) == "X")
                 X = list.at(1).toInt();

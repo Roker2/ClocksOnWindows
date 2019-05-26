@@ -24,7 +24,7 @@ Clocks::~Clocks()
     SaveSettings.SetRedValue(&Red);
     SaveSettings.SetGreenValue(&Green);
     SaveSettings.SetBlueValue(&Blue);
-    SaveSettings.SetAlaphaValue(&Alpha);
+    SaveSettings.SetAlphaValue(&Alpha);
     SaveSettings.SetXValue(Coordinate_x());
     SaveSettings.SetYValue(Coordinate_y());
     SaveSettings.SetClocksTypeValue(GetTypeClocks());
