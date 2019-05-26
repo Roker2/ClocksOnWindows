@@ -275,8 +275,8 @@
   <widget class="QCheckBox" name="checkBox_clocks_or_timer">
    <property name="geometry">
     <rect>
-     <x>202</x>
-     <y>340</y>
+     <x>234</x>
+     <y>335</y>
      <width>191</width>
      <height>26</height>
     </rect>
