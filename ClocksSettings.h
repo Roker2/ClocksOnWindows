@@ -5,6 +5,7 @@
 #include <QString>
 #include <QDesktopWidget>
 #include <SaveRestoreSettings/QSaveSettings.h>
+#include <SaveRestoreSettings/QRestoreSettings.h>
 
 namespace Ui {
 class Clocks;

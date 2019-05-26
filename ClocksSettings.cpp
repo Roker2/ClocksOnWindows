@@ -6,6 +6,16 @@ Clocks::Clocks(QWidget *parent) :
     ui(new Ui::Clocks)
 {
     ui->setupUi(this);
+    QRestoreSettings RestoreSettings;
+    RestoreSettings.Restore();
+    ui->Slider_Red->setValue((*RestoreSettings.ReturnRedValue()));
+    ui->Slider_Green->setValue((*RestoreSettings.ReturnGreenValue()));
+    ui->Slider_Blue->setValue((*RestoreSettings.ReturnBlueValue()));
+    ui->Slider_Transparent->setValue((*RestoreSettings.ReturnAlphaValue()));
+    ui->Edit_coordinate_x->setText(QString::number(*RestoreSettings.ReturnXValue()));
+    ui->Edit_coordinate_y->setText(QString::number(*RestoreSettings.ReturnYValue()));
+    ui->Edit_ClocksType->setText((*RestoreSettings.ReturnClocksTypeValue()));
+    ui->Slider_FontSize->setValue((*RestoreSettings.ReturnFontSizeValue()));
 }
 
 Clocks::~Clocks()
