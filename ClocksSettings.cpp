@@ -10,16 +10,16 @@ Clocks::Clocks(QWidget *parent) :
 
 Clocks::~Clocks()
 {
-    QSaveSettings Save;
-    Save.SetRedValue(&Red);
-    Save.SetGreenValue(&Green);
-    Save.SetBlueValue(&Blue);
-    Save.SetAlaphaValue(&Alpha);
-    Save.SetXValue(Coordinate_x());
-    Save.SetYValue(Coordinate_y());
-    Save.SetClocksTypeValue(GetTypeClocks());
-    Save.SetFontSize(FontSizeValue());
-    Save.Save();
+    QSaveSettings SaveSettings;
+    SaveSettings.SetRedValue(&Red);
+    SaveSettings.SetGreenValue(&Green);
+    SaveSettings.SetBlueValue(&Blue);
+    SaveSettings.SetAlaphaValue(&Alpha);
+    SaveSettings.SetXValue(Coordinate_x());
+    SaveSettings.SetYValue(Coordinate_y());
+    SaveSettings.SetClocksTypeValue(GetTypeClocks());
+    SaveSettings.SetFontSize(FontSizeValue());
+    SaveSettings.Save();
     delete ui;
 }
 
