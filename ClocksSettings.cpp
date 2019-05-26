@@ -15,6 +15,10 @@ Clocks::~Clocks()
     Save.SetGreenValue(&Green);
     Save.SetBlueValue(&Blue);
     Save.SetAlaphaValue(&Alpha);
+    Save.SetXValue(Coordinate_x());
+    Save.SetYValue(Coordinate_y());
+    Save.SetClocksTypeValue(GetTypeClocks());
+    Save.SetFontSize(FontSizeValue());
     Save.Save();
     delete ui;
 }
