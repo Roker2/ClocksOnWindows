@@ -3,11 +3,12 @@
 int QLabelClocks::LengthLabel()
 {
     QFontMetrics FontInfo(fontMetrics());
-    int temp = (FontInfo.width("00:00:00") + FontInfo.leftBearing(':') * 2 + FontInfo.rightBearing(':') * 2);
-    for (int i = 0; i < 6; i++)
+    int temp = 0;
+    for (int i = 0; i < ClocksType.length(); i++)
     {
-        temp += FontInfo.leftBearing('0');
-        temp += FontInfo.rightBearing('0');
+        temp += FontInfo.width(ClocksType.at(i));
+        temp += FontInfo.leftBearing(ClocksType.at(i));
+        temp += FontInfo.rightBearing(ClocksType.at(i));
     }
     SettingsMenu->ClocksWidth = temp;
     return temp;
@@ -32,7 +33,7 @@ void QLabelClocks::timerEvent(QTimerEvent*)
         if (ClocksType != SettingsMenu->GetTypeClocks())
         {
             ClocksType = SettingsMenu->GetTypeClocks();
-            SetCurrentTime();
+            MainMenu->setGeometry(x, y, LengthLabel(), height() + FontSize + pluswidth);
         }
     }
     SetSizeAndPos();
