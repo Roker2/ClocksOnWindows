@@ -30,7 +30,10 @@ void QRestoreSettings::Restore()
             else if(list.at(0) == "Y")
                 Y = list.at(1).toInt();
             else if(list.at(0) == "ClocksType")
+            {
                 ClocksType = list.at(1);
+                ClocksType.chop(1);//last char is '/n', this char unneeded
+            }
             else if(list.at(0) == "FontSize")
                 FontSize = list.at(1).toInt();
         }
