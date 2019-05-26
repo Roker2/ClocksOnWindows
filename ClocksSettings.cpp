@@ -14,6 +14,7 @@ Clocks::~Clocks()
     Save.SetRedValue(&Red);
     Save.SetGreenValue(&Green);
     Save.SetBlueValue(&Blue);
+    Save.SetAlaphaValue(&Alpha);
     Save.Save();
     delete ui;
 }
