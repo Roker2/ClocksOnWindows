@@ -246,54 +246,6 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>8</x>
-     <y>247</y>
-     <width>191</width>
-     <height>80</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout_6">
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_7">
-      <item>
-       <widget class="QPushButton" name="Button_LeftUp">
-        <property name="text">
-         <string>Left Up</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="Button_RightUp">
-        <property name="text">
-         <string>Right Up</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_6">
-      <item>
-       <widget class="QPushButton" name="Button_LeftDown">
-        <property name="text">
-         <string>Left Down</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="Button_RightDown">
-        <property name="text">
-         <string>Right Down</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-   </layout>
-  </widget>
   <widget class="QLineEdit" name="Edit_ClocksType">
    <property name="geometry">
     <rect>
@@ -320,57 +272,6 @@
     <string>Clocks Type</string>
    </property>
   </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>200</x>
-     <y>244</y>
-     <width>246</width>
-     <height>90</height>
-    </rect>
-   </property>
-   <layout class="QHBoxLayout" name="horizontalLayout_8">
-    <item>
-     <layout class="QVBoxLayout" name="verticalLayout_7">
-      <item>
-       <widget class="QTimeEdit" name="timeEdit_Alarm">
-        <property name="displayFormat">
-         <string>hh:mm:ss</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="Button_Enable_Disable_Alarm">
-        <property name="text">
-         <string>Enable Alarm</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item>
-     <layout class="QVBoxLayout" name="verticalLayout_8">
-      <item>
-       <widget class="QTimeEdit" name="timeEdit_Timer">
-        <property name="readOnly">
-         <bool>false</bool>
-        </property>
-        <property name="displayFormat">
-         <string>hh:mm:ss</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="Button_Enable_Disable_Timer">
-        <property name="text">
-         <string>Enable Timer</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-   </layout>
-  </widget>
   <widget class="QCheckBox" name="checkBox_clocks_or_timer">
    <property name="geometry">
     <rect>
@@ -386,6 +287,101 @@
    <property name="checkable">
     <bool>false</bool>
    </property>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>252</y>
+     <width>420</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_9">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_6">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_7">
+        <item>
+         <widget class="QPushButton" name="Button_LeftUp">
+          <property name="text">
+           <string>Left Up</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="Button_RightUp">
+          <property name="text">
+           <string>Right Up</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_6">
+        <item>
+         <widget class="QPushButton" name="Button_LeftDown">
+          <property name="text">
+           <string>Left Down</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="Button_RightDown">
+          <property name="text">
+           <string>Right Down</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_8">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <item>
+         <widget class="QTimeEdit" name="timeEdit_Alarm">
+          <property name="displayFormat">
+           <string>hh:mm:ss</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="Button_Enable_Disable_Alarm">
+          <property name="text">
+           <string>Enable Alarm</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_8">
+        <item>
+         <widget class="QTimeEdit" name="timeEdit_Timer">
+          <property name="readOnly">
+           <bool>false</bool>
+          </property>
+          <property name="displayFormat">
+           <string>hh:mm:ss</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="Button_Enable_Disable_Timer">
+          <property name="text">
+           <string>Enable Timer</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>
