@@ -33,6 +33,6 @@ SOURCES += ClocksSettings.cpp main.cpp mainwindow.cpp QLabelClocks.cpp \
     SaveRestoreSettings/QSaveSettings.cpp
 
 #Program Information
-VERSION = 0.4.1
+VERSION = 0.4.2
 QMAKE_TARGET_PRODUCT = Clocks on windows
 QMAKE_TARGET_DESCRIPTION = Program by Dmitry Minko (Roker2)
