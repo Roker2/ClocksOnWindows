@@ -246,32 +246,6 @@
     </item>
    </layout>
   </widget>
-  <widget class="QLineEdit" name="Edit_ClocksType">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>343</y>
-     <width>81</width>
-     <height>26</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>hh:mm:ss</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_3">
-   <property name="geometry">
-    <rect>
-     <x>15</x>
-     <y>328</y>
-     <width>71</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Clocks Type</string>
-   </property>
-  </widget>
   <widget class="QCheckBox" name="checkBox_clocks_or_timer">
    <property name="geometry">
     <rect>
@@ -288,7 +262,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>9</x>
@@ -380,6 +354,32 @@
        </layout>
       </item>
      </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>320</y>
+     <width>201</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_9">
+    <item>
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>Clocks Type</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="Edit_ClocksType">
+      <property name="text">
+       <string>hh:mm:ss</string>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>
