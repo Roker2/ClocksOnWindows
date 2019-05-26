@@ -26,7 +26,7 @@ protected:
     QMediaPlayer *AlarmPlayer;
     QMediaPlaylist *AlarmMusic;
     QTime Timer;
-    int ValueTimerEvent = 1000;
+    int ValueTimerEvent = 333;
 
 signals:
 
