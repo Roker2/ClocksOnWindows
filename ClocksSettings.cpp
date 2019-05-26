@@ -10,6 +10,11 @@ Clocks::Clocks(QWidget *parent) :
 
 Clocks::~Clocks()
 {
+    QSaveSettings Save;
+    Save.SetRedValue(&Red);
+    Save.SetGreenValue(&Green);
+    Save.SetBlueValue(&Blue);
+    Save.Save();
     delete ui;
 }
 
