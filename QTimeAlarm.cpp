@@ -48,7 +48,7 @@ void QTimeAlarm::EnableMusic()
 {
     AlarmPlayer = new QMediaPlayer;
     AlarmMusic = new QMediaPlaylist;
-    AlarmMusic->addMedia(QUrl::fromLocalFile(QDir::toNativeSeparators(QDir::current().path() + "/sounds/AlarmMusic.mp3")));
+    AlarmMusic->addMedia(QUrl::fromLocalFile(("sounds/AlarmMusic.mp3")));
     AlarmMusic->setPlaybackMode(QMediaPlaylist::Loop);
     AlarmPlayer->setPlaylist(AlarmMusic);
     AlarmPlayer->setVolume(100);
