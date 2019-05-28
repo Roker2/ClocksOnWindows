@@ -18,5 +18,7 @@ MainWindow::MainWindow(QWidget *parent) :
 MainWindow::~MainWindow()
 {
     delete Settings;
+    delete LabelClocks;
+    delete TimeAlarm;
     delete ui;
 }
