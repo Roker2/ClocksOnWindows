@@ -6,6 +6,7 @@
 #include <QMediaPlaylist>
 #include <QDir>
 #include <QUrl>
+#include <QMessageBox>
 #include "QLabelClocks.h"
 #include "ClocksSettings.h"
 
