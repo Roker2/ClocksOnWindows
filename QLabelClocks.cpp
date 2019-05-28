@@ -7,8 +7,8 @@ int QLabelClocks::LengthLabel()
     for (int i = 0; i < ClocksType.length(); i++)
     {
         temp += FontInfo.width(ClocksType.at(i));
-        temp += FontInfo.leftBearing(ClocksType.at(i));
-        temp += FontInfo.rightBearing(ClocksType.at(i));
+        /*temp += FontInfo.leftBearing(ClocksType.at(i));
+        temp += FontInfo.rightBearing(ClocksType.at(i));*/
     }
     SettingsMenu->ClocksWidth = temp;
     return temp;
