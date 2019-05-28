@@ -29,10 +29,12 @@ void QLabelClocks::timerEvent(QTimerEvent*)
             SettingsMenu->ChangedFont = false;
             MainMenu->setGeometry(x, y, LengthLabel(), height() + FontSize + pluswidth);
             changeColor();
+            setGeometry(0, 0, LengthLabel(), height());
         }
         if (ClocksType != SettingsMenu->GetTypeClocks())
         {
             ClocksType = SettingsMenu->GetTypeClocks();
+            setGeometry(0, 0, LengthLabel(), height());
             MainMenu->setGeometry(x, y, LengthLabel(), height() + FontSize + pluswidth);
         }
     }
@@ -47,7 +49,6 @@ void QLabelClocks::changeColor()
 
 void QLabelClocks::SetSizeAndPos()
 {
-    setGeometry(0, 0, LengthLabel(), height());
     if (SettingsMenu)
     {
         if (x != SettingsMenu->Coordinate_x() || y != SettingsMenu->Coordinate_y())
