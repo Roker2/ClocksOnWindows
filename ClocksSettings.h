@@ -51,31 +51,18 @@ protected:
 
 private slots:
     void on_Button_SetWhite_clicked();
-
     void on_Button_SetGrey_clicked();
-
     void on_Button_SetBlack_clicked();
-
     void on_fontComboBox_currentFontChanged(const QFont &f);
-
     void on_Button_RightUp_clicked();
-
     void on_Button_RightDown_clicked();
-
     void on_Button_LeftDown_clicked();
-
     void on_Button_LeftUp_clicked();
-
     void on_Button_Enable_Disable_Alarm_clicked();
-
     void on_Button_Enable_Disable_Timer_clicked();
-
     void on_Slider_Red_valueChanged(int value);
-
     void on_Slider_Green_valueChanged(int value);
-
     void on_Slider_Blue_valueChanged(int value);
-
     void on_Slider_Transparent_valueChanged(int value);
 
 private:
