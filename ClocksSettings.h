@@ -38,6 +38,7 @@ public:
     int ClocksWidth;
     bool ChangedFont = false;
     bool TimerWasEnabled = false;
+    QString getCSSStyle();
 
 protected:
     void EnableAlarm();

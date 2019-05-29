@@ -238,3 +238,8 @@ void ClocksSettings::on_Slider_Transparent_valueChanged(int value)
 {
     Alpha = value;
 }
+
+QString ClocksSettings::getCSSStyle()
+{
+    return CSSStyle;
+}
