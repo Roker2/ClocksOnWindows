@@ -97,7 +97,7 @@ QComboBox:disabled {
         color: #f0f0f0;
 }
 
-QTimeEdit::up-button {
+/*QTimeEdit::up-button {
 	subcontrol-origin: border;
 	subcontrol-position: top right;
 	width: 20px;
@@ -125,7 +125,7 @@ QTimeEdit::down-button:pressed,QComboBox::down-arrow:on {
 
 QTimeEdit::up-button:pressed {
 	image: url(spinup-pressed.png);
- }
+ }*/
 
 QLineEdit {
 	border: 1px solid rgb(0, 0, 0);
