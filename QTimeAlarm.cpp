@@ -39,7 +39,7 @@ void QTimeAlarm::timerEvent(QTimerEvent *)
     SetClocks();
 }
 
-void QTimeAlarm::SetSettingsMenu(Clocks *temp)
+void QTimeAlarm::SetSettingsMenu(ClocksSettings *temp)
 {
     SettingsMenu = temp;
 }

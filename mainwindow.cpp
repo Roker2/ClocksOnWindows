@@ -6,7 +6,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    Settings = new Clocks;
+    Settings = new ClocksSettings;
     LabelClocks = new QLabelClocks(this);
     connect(ui->Button_Open_Settings, SIGNAL(clicked()), Settings, SLOT(show()));
     LabelClocks->SetSettingsMenu(Settings);

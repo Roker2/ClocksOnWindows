@@ -60,7 +60,7 @@ void QLabelClocks::SetSizeAndPos()
     }
 }
 
-void QLabelClocks::SetSettingsMenu(Clocks *temp)
+void QLabelClocks::SetSettingsMenu(ClocksSettings *temp)
 {
     SettingsMenu = temp;
 }

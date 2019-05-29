@@ -15,7 +15,7 @@ class QTimeAlarm : public QObject
     Q_OBJECT
 public:
     explicit QTimeAlarm(QObject *parent = nullptr, QLabelClocks *Clocks = NULL);
-    void SetSettingsMenu(Clocks *temp);
+    void SetSettingsMenu(ClocksSettings *temp);
 
 protected:
     virtual void timerEvent(QTimerEvent*);
@@ -23,7 +23,7 @@ protected:
     void DisableMusic();
     void SetClocks();
     QLabelClocks *LabelClocks;
-    Clocks *SettingsMenu;
+    ClocksSettings *SettingsMenu;
     QMediaPlayer *AlarmPlayer;
     QMediaPlaylist *AlarmMusic;
     QTime Timer;

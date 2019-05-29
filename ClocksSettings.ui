@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Clocks</class>
- <widget class="QWidget" name="Clocks">
+ <class>ClocksSettings</class>
+ <widget class="QWidget" name="ClocksSettings">
   <property name="windowModality">
    <enum>Qt::ApplicationModal</enum>
   </property>

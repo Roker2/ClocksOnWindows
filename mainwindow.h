@@ -23,7 +23,7 @@ protected:
 
 private:
     Ui::MainWindow *ui;
-    Clocks *Settings;
+    ClocksSettings *Settings;
 };
 
 #endif // MAINWINDOW_H

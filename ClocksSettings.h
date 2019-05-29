@@ -8,16 +8,16 @@
 #include <SaveRestoreSettings/QRestoreSettings.h>
 
 namespace Ui {
-class Clocks;
+class ClocksSettings;
 }
 
-class Clocks : public QWidget
+class ClocksSettings : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit Clocks(QWidget *parent = nullptr);
-    ~Clocks();
+    explicit ClocksSettings(QWidget *parent = nullptr);
+    ~ClocksSettings();
     int RedValue();
     int GreenValue();
     int BlueValue();
@@ -66,7 +66,7 @@ private slots:
     void on_Slider_Transparent_valueChanged(int value);
 
 private:
-    Ui::Clocks *ui;
+    Ui::ClocksSettings *ui;
 };
 
 #endif // CLOCKS_H
