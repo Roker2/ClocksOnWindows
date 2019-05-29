@@ -16,13 +16,12 @@ ClocksSettings::ClocksSettings(QWidget *parent) :
     ui->Edit_coordinate_y->setText(QString::number(*RestoreSettings.ReturnYValue()));
     ui->Edit_ClocksType->setText((*RestoreSettings.ReturnClocksTypeValue()));
     ui->Slider_FontSize->setValue((*RestoreSettings.ReturnFontSizeValue()));
-    QString CSSStyle;
-        QFile CSSFile("themes/StandartTheme/StandartTheme.css");
-        if(CSSFile.open(QIODevice::ReadOnly))
-        {
-            CSSStyle = CSSFile.readAll();
-            CSSFile.close();
-        }
+    QFile CSSFile("themes/StandartTheme/StandartTheme.css");
+    if(CSSFile.open(QIODevice::ReadOnly))
+    {
+        CSSStyle = CSSFile.readAll();
+        CSSFile.close();
+    }
     setStyleSheet(CSSStyle);
 }
 

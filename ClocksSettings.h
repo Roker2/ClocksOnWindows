@@ -48,6 +48,7 @@ protected:
     int Green = 255;
     int Blue = 255;
     int Alpha = 80;
+    QString CSSStyle;
 
 private slots:
     void on_Button_SetWhite_clicked();
