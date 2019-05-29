@@ -22,6 +22,7 @@ protected:
     void EnableMusic();
     void DisableMusic();
     void SetClocks();
+    void ShowMessage(QString header, QString message);
     QLabelClocks *LabelClocks;
     ClocksSettings *SettingsMenu;
     QMediaPlayer *AlarmPlayer;

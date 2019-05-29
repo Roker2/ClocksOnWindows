@@ -13,10 +13,7 @@ void QTimeAlarm::timerEvent(QTimerEvent *)
         if (QTime::currentTime().toString("hh:mm:ss") == SettingsMenu->AlarmTime().toString("hh:mm:ss"))
         {
             EnableMusic();
-            QMessageBox *info = new QMessageBox(QMessageBox::Information, "Alarm", "Current time is " + QTime::currentTime().toString("hh:mm:ss"), QMessageBox::Ok);
-            info->setStyleSheet(SettingsMenu->getCSSStyle());
-            info->exec();
-            delete info;
+            ShowMessage("Alarm", "Current time is " + QTime::currentTime().toString("hh:mm:ss"));
             SettingsMenu->DisableAlarm();
             DisableMusic();
         }
@@ -33,10 +30,7 @@ void QTimeAlarm::timerEvent(QTimerEvent *)
         if (Timer.toString("hh:mm:ss") == "00:00:00")
         {
             EnableMusic();
-            QMessageBox *info = new QMessageBox(QMessageBox::Information, "Timer", "Timer over", QMessageBox::Ok);
-            info->setStyleSheet(SettingsMenu->getCSSStyle());
-            info->exec();
-            delete info;
+            ShowMessage("Timer", "Timer over");
             SettingsMenu->DisableTimer();
             DisableMusic();
         }
@@ -73,4 +67,12 @@ void QTimeAlarm::SetClocks()
         LabelClocks->SetCurrentTime();
     else
         LabelClocks->SetTime(&Timer);
+}
+
+void QTimeAlarm::ShowMessage(QString header, QString message)
+{
+    QMessageBox *info = new QMessageBox(QMessageBox::Information, header, message, QMessageBox::Ok);
+    info->setStyleSheet(SettingsMenu->getCSSStyle());
+    info->exec();
+    delete info;
 }
