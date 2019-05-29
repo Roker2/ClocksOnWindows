@@ -1,0 +1,1 @@
+Theme based on [theme Darcula](https://github.com/mervick/Qt-Creator-Darcula) and [Stellarium theme](https://github.com/Stellarium).
