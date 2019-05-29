@@ -1,0 +1,146 @@
+QWidget{
+    color: #bbbbbb;
+    background: #3c3f41;
+    font-size: 13px;
+    border-color: #2b2b2b;
+}
+
+QPushButton {
+	border: 1px solid rgb(0, 0, 0);
+	border-radius: 4px;
+	padding: 2px 8px;
+        color: rgb(31, 31, 31);
+	font-size: 92%;
+	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 rgb(183, 184, 185), stop: 1 rgb(111, 113, 114));
+}
+
+QPushButton::disabled {
+        color: #f0f0f0;
+}
+
+QPushButton:pressed {
+	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 rgb(41, 41, 49), stop: 0.2 rgb(73, 74, 84), stop: 1 rgb(58, 60, 73));
+}
+
+QPushButton:flat {
+	border: none; /* no border for a flat push button */
+	background: transparent;
+}
+
+QSlider {
+	background: none;
+}
+
+QSlider::groove:horizontal {
+        border: none;
+        height: 4px; /* the groove expands to the size of the slider by default. by giving it a height, it has a fixed size */
+	background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 rgb(0, 0, 0), stop: 1 rgb(54, 54, 54));
+        margin: 0;
+}
+
+QSlider::handle:horizontal {
+	border: 1px solid rgb(0, 0, 0);
+	border-radius: 2px;
+	width: 32px;
+        margin: -5px 0; /* handle is placed by default on the contents rect of the groove. Expand outside the groove */
+	color: rgb(31, 31, 31);
+	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 rgb(183, 184, 185), stop: 1 rgb(111, 113, 114));
+}
+
+QTimeEdit,QComboBox {
+	padding-right: 0px;
+	background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 rgba(180, 180, 183, 100%), stop: 1 rgba(93, 95, 98, 100%));
+	border: 1px solid rgb(0, 0, 0);
+	color: rgb(31, 31, 31);
+	min-height: 22px;
+}
+
+QComboBox::drop-down {
+	subcontrol-origin: padding;
+	subcontrol-position: center right;
+	width: 20px;
+	border: none;
+}
+
+QComboBox::drop-down {
+	subcontrol-origin: padding;
+	subcontrol-position: center right;
+	width: 20px;
+	border: none;
+}
+
+
+QComboBox::down-arrow {
+	width: 20px;
+	height: 22px;
+	image: url(spindown.png);
+	background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 rgb(97, 97, 92), stop: 1 rgb(40, 40, 40));
+}
+
+QComboBox::down-arrow:on {
+	image: url(:/graphicGui/spindown-pressed.png);
+}
+
+QComboBox QAbstractItemView {
+	color: rgb(31, 31, 31);
+	border: 1px solid rgb(0, 0, 0);
+	border-bottom: 1px solid rgb(0, 0, 0);
+	border-top: none;
+	background: rgba(93, 95, 98, 100%);
+}
+
+QComboBox {
+	padding-left: 3px;
+}
+
+QComboBox:disabled {
+        color: #f0f0f0;
+}
+
+QTimeEdit::up-button {
+	subcontrol-origin: border;
+	subcontrol-position: top right;
+	width: 20px;
+	border: 1px solid rgba(0, 0, 0, 0%);
+	border-top: 1px solid rgb(0, 0, 0);
+	border-right: 1px solid rgb(0, 0, 0);
+	image: url(spinup.png);
+	background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 rgb(97, 97, 92), stop: 1 rgb(74, 74, 75));
+}
+
+QTimeEdit::down-button,QComboBox::down-arrow {
+	subcontrol-origin: border;
+	subcontrol-position: bottom right;
+	width: 20px;
+	border: 1px solid rgba(0, 0, 0, 0%);
+	border-right: 1px solid rgb(0, 0, 0);
+	border-bottom: 1px solid rgb(0, 0, 0);
+	image: url(spindown.png);
+	background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 rgb(68, 68, 69), stop: 1 rgb(40, 40, 40));
+}
+
+QTimeEdit::down-button:pressed,QComboBox::down-arrow:on {
+	image: url(spindown-pressed.png);
+ }
+
+QTimeEdit::up-button:pressed {
+	image: url(spinup-pressed.png);
+ }
+
+QLineEdit {
+	border: 1px solid rgb(0, 0, 0);
+	border-radius: 0px;
+	padding: 0 8px;
+	background: rgb(30, 30, 31);
+	selection-background-color: rgb(253, 216, 134);
+	color: rgb(170, 173, 164);
+	font-size: 92%;
+}
+
+QLineEdit:disabled {
+	background: rgb(90, 90, 90);
+}
+
+QLineEdit[collision="true"] {
+	color: red;
+}
