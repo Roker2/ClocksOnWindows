@@ -20,7 +20,7 @@
    <iconset>
     <normaloff>icons/baseline_extension_white_48dp.png</normaloff>icons/baseline_extension_white_48dp.png</iconset>
   </property>
-  <widget class="QWidget" name="layoutWidget">
+  <widget class="QWidget" name="layoutWidget1">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -123,7 +123,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="layoutWidget">
+  <widget class="QWidget" name="layoutWidget2">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -156,7 +156,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="layoutWidget">
+  <widget class="QWidget" name="layoutWidget3">
    <property name="geometry">
     <rect>
      <x>9</x>
@@ -262,7 +262,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QWidget" name="layoutWidget">
+  <widget class="QWidget" name="layoutWidget4">
    <property name="geometry">
     <rect>
      <x>9</x>
