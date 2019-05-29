@@ -78,7 +78,7 @@ QComboBox::down-arrow {
 }
 
 QComboBox::down-arrow:on {
-	image: url(:/graphicGui/spindown-pressed.png);
+	image: url(spindown-pressed.png);
 }
 
 QComboBox QAbstractItemView {
