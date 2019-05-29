@@ -13,7 +13,9 @@ void QTimeAlarm::timerEvent(QTimerEvent *)
         if (QTime::currentTime().toString("hh:mm:ss") == SettingsMenu->AlarmTime().toString("hh:mm:ss"))
         {
             EnableMusic();
-            QMessageBox::information(nullptr, "Alarm", "Current time is " + QTime::currentTime().toString("hh:mm:ss"));
+            QMessageBox *info = new QMessageBox(QMessageBox::Information, "Alarm", "Current time is " + QTime::currentTime().toString("hh:mm:ss"), QMessageBox::Ok);
+            info->exec();
+            delete info;
             SettingsMenu->DisableAlarm();
             DisableMusic();
         }
@@ -30,7 +32,9 @@ void QTimeAlarm::timerEvent(QTimerEvent *)
         if (Timer.toString("hh:mm:ss") == "00:00:00")
         {
             EnableMusic();
-            QMessageBox::information(nullptr, "Timer", "Timer over");
+            QMessageBox *info = new QMessageBox(QMessageBox::Information, "Timer", "Timer over", QMessageBox::Ok);
+            info->exec();
+            delete info;
             SettingsMenu->DisableTimer();
             DisableMusic();
         }
