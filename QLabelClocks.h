@@ -15,9 +15,12 @@ protected:
     QPushButton *SettingsButton = NULL;
     QWidget *MainMenu = NULL;
     int LengthLabel();
+    int HeightLabel();
     virtual void timerEvent(QTimerEvent*);
     void changeColor();
     void SetSizeAndPos();
+    void MainMenuSetGeometry();
+    int HeightLabelMax();
 
 public:
     void SetSettingsMenu(ClocksSettings *temp);

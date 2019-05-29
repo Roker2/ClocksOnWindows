@@ -14,6 +14,20 @@ int QLabelClocks::LengthLabel()
     return temp;
 }
 
+int QLabelClocks::HeightLabel()
+{
+    QFontMetrics FontInfo(fontMetrics());
+    return FontInfo.height();
+}
+
+int QLabelClocks::HeightLabelMax()
+{
+    QFont temp = this->font();
+    temp.setPixelSize(SettingsMenu->FontSizeMax());
+    QFontMetrics FontInfo(temp);
+    return FontInfo.height();
+}
+
 void QLabelClocks::timerEvent(QTimerEvent*)
 {
     if (SettingsMenu)
@@ -25,17 +39,18 @@ void QLabelClocks::timerEvent(QTimerEvent*)
             blue = SettingsMenu->BlueValue();
             alpha = SettingsMenu->AlphaValue();
             FontSize = SettingsMenu->FontSizeValue();
-            SettingsButton->setGeometry(SettingsButton->x(), 22 + 11 * FontSize / SettingsMenu->FontSizeMax(), 70 * FontSize / SettingsMenu->FontSizeMax(), 25 * FontSize / SettingsMenu->FontSizeMax());
+            SettingsButton->setGeometry(SettingsButton->x(), 1 + 35 * HeightLabel() / HeightLabelMax(), 70 * HeightLabel() / HeightLabelMax(), 25 * HeightLabel() / HeightLabelMax());
             SettingsMenu->ChangedFont = false;
-            MainMenu->setGeometry(x, y, LengthLabel(), height() + FontSize + pluswidth);
+            MainMenuSetGeometry();
             changeColor();
-            setGeometry(0, 0, LengthLabel(), height());
+            setGeometry(0, 0, LengthLabel(), HeightLabel());
+            MainMenuSetGeometry();
         }
         if (ClocksType != SettingsMenu->GetTypeClocks())
         {
             ClocksType = SettingsMenu->GetTypeClocks();
-            setGeometry(0, 0, LengthLabel(), height());
-            MainMenu->setGeometry(x, y, LengthLabel(), height() + FontSize + pluswidth);
+            setGeometry(0, 0, LengthLabel(), HeightLabel());
+            MainMenuSetGeometry();
         }
     }
     SetSizeAndPos();
@@ -55,9 +70,14 @@ void QLabelClocks::SetSizeAndPos()
         {
             x = SettingsMenu->Coordinate_x();
             y = SettingsMenu->Coordinate_y();
-            MainMenu->setGeometry(x, y, LengthLabel(), height() + FontSize + pluswidth);
+            MainMenuSetGeometry();
         }
     }
+}
+
+void QLabelClocks::MainMenuSetGeometry()
+{
+    MainMenu->setGeometry(x, y, LengthLabel(), 87 * HeightLabel() / HeightLabelMax());
 }
 
 void QLabelClocks::SetSettingsMenu(ClocksSettings *temp)
@@ -94,6 +114,6 @@ QLabelClocks::QLabelClocks(QWidget *parent) :
     setAttribute(Qt::WA_TranslucentBackground);
     MainMenu = parent;
     QFontMetrics FontInfo(fontMetrics());
-    MainMenu->setGeometry(x, y, width() + (FontInfo.width('0') + FontInfo.rightBearing('0') + FontInfo.leftBearing('0')) * 6 + (FontInfo.rightBearing(':') + FontInfo.leftBearing(':')) * 2 + 6, height() + FontSize + pluswidth);
+    MainMenu->setGeometry(x, y, width() + (FontInfo.width('0') + FontInfo.rightBearing('0') + FontInfo.leftBearing('0')) * 6 + (FontInfo.rightBearing(':') + FontInfo.leftBearing(':')) * 2 + 6, HeightLabel() + FontSize + pluswidth);
     startTimer(100);
 }
