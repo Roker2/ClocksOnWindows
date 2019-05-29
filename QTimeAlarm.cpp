@@ -25,10 +25,9 @@ void QTimeAlarm::timerEvent(QTimerEvent *)
     }
     if(SettingsMenu->GetTimerState())
     {
-        QTime temp_time(0, 0, 0, 0);
         SettingsMenu->TimerMinusTime(ValueTimerEvent);
         Timer = Timer.addMSecs(-ValueTimerEvent);
-        if (Timer <= temp_time)
+        if (Timer.toString("hh:mm:ss") == "00:00:00")
         {
             EnableMusic();
             QMessageBox::information(nullptr, "Timer", "Timer over");
