@@ -14,6 +14,7 @@ void QTimeAlarm::timerEvent(QTimerEvent *)
         {
             EnableMusic();
             QMessageBox *info = new QMessageBox(QMessageBox::Information, "Alarm", "Current time is " + QTime::currentTime().toString("hh:mm:ss"), QMessageBox::Ok);
+            info->setStyleSheet(SettingsMenu->getCSSStyle());
             info->exec();
             delete info;
             SettingsMenu->DisableAlarm();
@@ -33,6 +34,7 @@ void QTimeAlarm::timerEvent(QTimerEvent *)
         {
             EnableMusic();
             QMessageBox *info = new QMessageBox(QMessageBox::Information, "Timer", "Timer over", QMessageBox::Ok);
+            info->setStyleSheet(SettingsMenu->getCSSStyle());
             info->exec();
             delete info;
             SettingsMenu->DisableTimer();
