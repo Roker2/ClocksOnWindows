@@ -105,7 +105,7 @@ void QLabelClocks::SetTime(QTime *time)
     setText(time->toString(ClocksType));
 }
 
-QLabelClocks::QLabelClocks(QWidget *parent) :
+QLabelClocks::QLabelClocks(QWidget *parent, ClocksSettings *Settings) :
     QLabel(parent)
 {
     setStyleSheet("QLabel {color : rgba("+ QString::number(red) +", "+ QString::number(blue) +", "+ QString::number(green) +", "+ QString::number(alpha) +"); font-size:" + QString::number(FontSize) + "px}");
@@ -113,6 +113,7 @@ QLabelClocks::QLabelClocks(QWidget *parent) :
     setWindowFlag(Qt::FramelessWindowHint);
     setAttribute(Qt::WA_TranslucentBackground);
     MainMenu = parent;
+    SettingsMenu = Settings;
     QFontMetrics FontInfo(fontMetrics());
     MainMenu->setGeometry(x, y, width() + (FontInfo.width('0') + FontInfo.rightBearing('0') + FontInfo.leftBearing('0')) * 6 + (FontInfo.rightBearing(':') + FontInfo.leftBearing(':')) * 2 + 6, HeightLabel() + FontSize + pluswidth);
     startTimer(100);

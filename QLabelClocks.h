@@ -27,7 +27,7 @@ public:
     void SetSettingsButton(QPushButton *temp);
     void SetCurrentTime();
     void SetTypeClocks(QString type);
-    QLabelClocks(QWidget *parent);
+    QLabelClocks(QWidget *parent, ClocksSettings *Settings);
     void SetTime(QTime *time);
 };
 
