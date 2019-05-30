@@ -115,6 +115,6 @@ QLabelClocks::QLabelClocks(QWidget *parent, ClocksSettings *Settings) :
     MainMenu = parent;
     SettingsMenu = Settings;
     QFontMetrics FontInfo(fontMetrics());
-    MainMenu->setGeometry(x, y, width() + (FontInfo.width('0') + FontInfo.rightBearing('0') + FontInfo.leftBearing('0')) * 6 + (FontInfo.rightBearing(':') + FontInfo.leftBearing(':')) * 2 + 6, HeightLabel() + FontSize + pluswidth);
+    MainMenu->setGeometry(x, y, width() + (FontInfo.width('0') + FontInfo.rightBearing('0') + FontInfo.leftBearing('0')) * 6 + (FontInfo.rightBearing(':') + FontInfo.leftBearing(':')) * 2 + 6, 87);
     startTimer(100);
 }
