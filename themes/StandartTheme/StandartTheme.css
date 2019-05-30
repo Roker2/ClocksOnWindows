@@ -69,19 +69,7 @@ QComboBox::drop-down {
 	border: none;
 }
 
-
-QComboBox::down-arrow {
-	width: 20px;
-	height: 22px;
-	image: url(spindown.png);
-	background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 rgb(97, 97, 92), stop: 1 rgb(40, 40, 40));
-}
-
-QComboBox::down-arrow:on {
-	image: url(spindown-pressed.png);
-}
-
-QComboBox QAbstractItemView {
+QComboBox,QAbstractItemView {
 	color: rgb(31, 31, 31);
 	border: 1px solid rgb(0, 0, 0);
 	border-bottom: 1px solid rgb(0, 0, 0);
@@ -97,14 +85,14 @@ QComboBox:disabled {
         color: #f0f0f0;
 }
 
-/*QTimeEdit::up-button {
+QTimeEdit::up-button {
 	subcontrol-origin: border;
 	subcontrol-position: top right;
 	width: 20px;
 	border: 1px solid rgba(0, 0, 0, 0%);
 	border-top: 1px solid rgb(0, 0, 0);
 	border-right: 1px solid rgb(0, 0, 0);
-	image: url(spinup.png);
+	image: url(themes/StandartTheme/spinup.png);
 	background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 rgb(97, 97, 92), stop: 1 rgb(74, 74, 75));
 }
 
@@ -115,17 +103,28 @@ QTimeEdit::down-button,QComboBox::down-arrow {
 	border: 1px solid rgba(0, 0, 0, 0%);
 	border-right: 1px solid rgb(0, 0, 0);
 	border-bottom: 1px solid rgb(0, 0, 0);
-	image: url(spindown.png);
+	image: url(themes/StandartTheme/spindown.png);
 	background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 rgb(68, 68, 69), stop: 1 rgb(40, 40, 40));
 }
 
 QTimeEdit::down-button:pressed,QComboBox::down-arrow:on {
-	image: url(spindown-pressed.png);
+	image: url(themes/StandartTheme/spindown-pressed.png);
  }
 
 QTimeEdit::up-button:pressed {
-	image: url(spinup-pressed.png);
- }*/
+	image: url(themes/StandartTheme/spinup-pressed.png);
+ }
+
+QComboBox::down-arrow {
+	width: 20px;
+	height: 22px;
+	image: url(themes/StandartTheme/spindown.png);
+	background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 rgb(97, 97, 92), stop: 1 rgb(40, 40, 40));
+}
+
+QComboBox::down-arrow:on {
+	image: url(themes/StandartTheme/spindown-pressed.png);
+}
 
 QLineEdit {
 	border: 1px solid rgb(0, 0, 0);
