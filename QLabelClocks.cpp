@@ -43,17 +43,16 @@ void QLabelClocks::timerEvent(QTimerEvent*)
             SettingsMenu->ChangedFont = false;
             MainMenuSetGeometry();
             changeColor();
-            setGeometry(0, 0, LengthLabel(), HeightLabel());
             MainMenuSetGeometry();
         }
         if (ClocksType != SettingsMenu->GetTypeClocks())
         {
             ClocksType = SettingsMenu->GetTypeClocks();
-            setGeometry(0, 0, LengthLabel(), HeightLabel());
             MainMenuSetGeometry();
         }
     }
     SetSizeAndPos();
+    setGeometry(0, 0, LengthLabel(), HeightLabel());
 }
 
 void QLabelClocks::changeColor()
