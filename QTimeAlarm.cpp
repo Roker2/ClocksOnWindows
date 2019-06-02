@@ -18,13 +18,13 @@ void QTimeAlarm::timerEvent(QTimerEvent *)
             DisableMusic();
         }
     }
-    if(SettingsMenu->TimerWasEnabled)
-    {
-        Timer = SettingsMenu->TimerValue();
-        SettingsMenu->TimerWasEnabled = false;
-    }
     if(SettingsMenu->GetTimerState())
     {
+        if(SettingsMenu->TimerWasEnabled)
+        {
+            Timer = SettingsMenu->TimerValue();
+            SettingsMenu->TimerWasEnabled = false;
+        }
         SettingsMenu->TimerMinusTime(ValueTimerEvent);
         Timer = Timer.addMSecs(-ValueTimerEvent);
         if (Timer.toString("hh:mm:ss") == "00:00:00")
