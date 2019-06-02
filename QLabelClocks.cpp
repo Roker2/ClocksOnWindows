@@ -4,9 +4,10 @@ int QLabelClocks::LengthLabel()
 {
     QFontMetrics FontInfo(fontMetrics());
     int temp = 0;
-    for (int i = 0; i < ClocksType.length(); i++)
+    QString str = SettingsMenu->GetTimerState() ? SettingsMenu->TimerValue().toString(ClocksType) : (QTime::currentTime().toString(ClocksType));
+    for (int i = 0; i < str.length(); i++)
     {
-        temp += FontInfo.width(ClocksType.at(i));
+        temp += FontInfo.width(str.at(i));
         /*temp += FontInfo.leftBearing(ClocksType.at(i));
         temp += FontInfo.rightBearing(ClocksType.at(i));*/
     }
