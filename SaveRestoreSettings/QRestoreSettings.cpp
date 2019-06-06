@@ -2,7 +2,7 @@
 
 QRestoreSettings::QRestoreSettings(QObject *parent) : QObject(parent)
 {
-
+    Restore();
 }
 
 void QRestoreSettings::Restore()
