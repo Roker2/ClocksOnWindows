@@ -7,7 +7,6 @@ ClocksSettings::ClocksSettings(QWidget *parent) :
 {
     ui->setupUi(this);
     QRestoreSettings RestoreSettings;
-    RestoreSettings.Restore();
     ui->Slider_Red->setValue((*RestoreSettings.ReturnRedValue()));
     ui->Slider_Green->setValue((*RestoreSettings.ReturnGreenValue()));
     ui->Slider_Blue->setValue((*RestoreSettings.ReturnBlueValue()));
