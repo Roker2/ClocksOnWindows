@@ -40,7 +40,6 @@ void QLabelClocks::timerEvent(QTimerEvent*)
             blue = SettingsMenu->BlueValue();
             alpha = SettingsMenu->AlphaValue();
             FontSize = SettingsMenu->FontSizeValue();
-            SettingsButton->setGeometry(SettingsButton->x(), 1 + 35 * HeightLabel() / HeightLabelMax(), 70 * HeightLabel() / HeightLabelMax(), 25 * HeightLabel() / HeightLabelMax());
             SettingsMenu->ChangedFont = false;
             MainMenuSetGeometry();
             changeColor();
@@ -59,7 +58,6 @@ void QLabelClocks::timerEvent(QTimerEvent*)
 void QLabelClocks::changeColor()
 {
     setStyleSheet("QLabel {color : rgba(" + QString::number(red) + ", " + QString::number(green) + ", " + QString::number(blue) + ", " + QString::number(alpha) + "); font-size:" + QString::number(FontSize) + "px}"); //"QLabel {color : rgba(0, 0, 255, value); font-size:36px}"
-    SettingsButton->setStyleSheet("QPushButton  {color : rgba(" + QString::number(red) + ", " + QString::number(green) + ", " + QString::number(blue) + ", " + QString::number(alpha) + "); background-color: rgba(" + QString::number(red) + ", " + QString::number(green) + ", " + QString::number(blue) + ", " + QString::number(alpha * 0.35) + "); border: none}");
 }
 
 void QLabelClocks::SetSizeAndPos()
