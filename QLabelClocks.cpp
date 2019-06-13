@@ -83,11 +83,6 @@ void QLabelClocks::SetSettingsMenu(ClocksSettings *temp)
     SettingsMenu = temp;
 }
 
-void QLabelClocks::SetSettingsButton(QPushButton *temp)
-{
-    SettingsButton = temp;
-}
-
 void QLabelClocks::SetCurrentTime()
 {
     setText(QTime::currentTime().toString(ClocksType));
