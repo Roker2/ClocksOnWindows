@@ -75,7 +75,7 @@ void QLabelClocks::SetSizeAndPos()
 
 void QLabelClocks::MainMenuSetGeometry()
 {
-    MainMenu->setGeometry(x, y, LengthLabel(), 87 * HeightLabel() / HeightLabelMax());
+    MainMenu->setGeometry(x, y, LengthLabel(), HeightLabel());
 }
 
 void QLabelClocks::SetSettingsMenu(ClocksSettings *temp)
@@ -108,6 +108,5 @@ QLabelClocks::QLabelClocks(QWidget *parent, ClocksSettings *Settings) :
     MainMenu = parent;
     SettingsMenu = Settings;
     QFontMetrics FontInfo(fontMetrics());
-    MainMenu->setGeometry(x, y, width() + (FontInfo.width('0') + FontInfo.rightBearing('0') + FontInfo.leftBearing('0')) * 6 + (FontInfo.rightBearing(':') + FontInfo.leftBearing(':')) * 2 + 6, 87);
     startTimer(100);
 }
