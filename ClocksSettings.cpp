@@ -22,6 +22,13 @@ ClocksSettings::ClocksSettings(QWidget *parent) :
         CSSFile.close();
     }
     setStyleSheet(CSSStyle);
+    trayIcon = new QSystemTrayIcon(this);
+    QIcon Icon("icons/baseline_schedule_white_48dp.png");
+    trayIcon->setIcon(Icon);
+    trayIcon->setToolTip("Clocks On Windows Settings");
+    trayIcon->show();
+    connect(trayIcon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)),
+            this, SLOT(iconActivated(QSystemTrayIcon::ActivationReason)));
 }
 
 ClocksSettings::~ClocksSettings()
@@ -36,6 +43,7 @@ ClocksSettings::~ClocksSettings()
     SaveSettings.SetClocksTypeValue(GetTypeClocks());
     SaveSettings.SetFontSize(FontSizeValue());
     SaveSettings.Save();
+    delete  trayIcon;
     delete ui;
 }
 
@@ -241,4 +249,16 @@ void ClocksSettings::on_Slider_Transparent_valueChanged(int value)
 QString ClocksSettings::getCSSStyle()
 {
     return CSSStyle;
+}
+
+void ClocksSettings::iconActivated(QSystemTrayIcon::ActivationReason reason)
+{
+    switch (reason) {
+    case QSystemTrayIcon::Trigger:
+        if(!this->isVisible())
+            this->show();
+        break;
+    default:
+        break;
+    }
 }

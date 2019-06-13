@@ -4,6 +4,8 @@
 #include <QWidget>
 #include <QString>
 #include <QDesktopWidget>
+#include <QSystemTrayIcon>
+#include <QIcon>
 #include <SaveRestoreSettings/QSaveSettings.h>
 #include <SaveRestoreSettings/QRestoreSettings.h>
 
@@ -66,9 +68,11 @@ private slots:
     void on_Slider_Green_valueChanged(int value);
     void on_Slider_Blue_valueChanged(int value);
     void on_Slider_Transparent_valueChanged(int value);
+    void iconActivated(QSystemTrayIcon::ActivationReason reason);
 
 private:
     Ui::ClocksSettings *ui;
+    QSystemTrayIcon         * trayIcon;
 };
 
 #endif // CLOCKS_H
