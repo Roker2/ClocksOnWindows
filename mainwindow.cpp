@@ -8,8 +8,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     Settings = new ClocksSettings;
     LabelClocks = new QLabelClocks(this, Settings);
-    connect(ui->Button_Open_Settings, SIGNAL(clicked()), Settings, SLOT(show()));
-    LabelClocks->SetSettingsButton(ui->Button_Open_Settings);
     TimeAlarm = new QTimeAlarm(this, LabelClocks);
     TimeAlarm->SetSettingsMenu(Settings);
 }
