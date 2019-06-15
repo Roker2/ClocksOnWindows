@@ -45,6 +45,8 @@ public:
 protected:
     void EnableAlarm();
     void EnableTimer();
+    void RestoreSetings();
+    void SaveSettings();
     bool AlarmState = false;
     bool TimerState = false;
     int Red = 255;

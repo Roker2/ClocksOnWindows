@@ -6,15 +6,7 @@ ClocksSettings::ClocksSettings(QWidget *parent) :
     ui(new Ui::ClocksSettings)
 {
     ui->setupUi(this);
-    QRestoreSettings RestoreSettings;
-    ui->Slider_Red->setValue((*RestoreSettings.ReturnRedValue()));
-    ui->Slider_Green->setValue((*RestoreSettings.ReturnGreenValue()));
-    ui->Slider_Blue->setValue((*RestoreSettings.ReturnBlueValue()));
-    ui->Slider_Transparent->setValue((*RestoreSettings.ReturnAlphaValue()));
-    ui->Edit_coordinate_x->setText(QString::number(*RestoreSettings.ReturnXValue()));
-    ui->Edit_coordinate_y->setText(QString::number(*RestoreSettings.ReturnYValue()));
-    ui->Edit_ClocksType->setText((*RestoreSettings.ReturnClocksTypeValue()));
-    ui->Slider_FontSize->setValue((*RestoreSettings.ReturnFontSizeValue()));
+    RestoreSetings();
     QFile CSSFile("themes/StandartTheme/StandartTheme.css");
     if(CSSFile.open(QIODevice::ReadOnly))
     {
@@ -33,16 +25,7 @@ ClocksSettings::ClocksSettings(QWidget *parent) :
 
 ClocksSettings::~ClocksSettings()
 {
-    QSaveSettings SaveSettings;
-    SaveSettings.SetRedValue(&Red);
-    SaveSettings.SetGreenValue(&Green);
-    SaveSettings.SetBlueValue(&Blue);
-    SaveSettings.SetAlphaValue(&Alpha);
-    SaveSettings.SetXValue(Coordinate_x());
-    SaveSettings.SetYValue(Coordinate_y());
-    SaveSettings.SetClocksTypeValue(GetTypeClocks());
-    SaveSettings.SetFontSize(FontSizeValue());
-    SaveSettings.Save();
+    SaveSettings();
     delete  trayIcon;
     delete ui;
 }
@@ -261,4 +244,31 @@ void ClocksSettings::iconActivated(QSystemTrayIcon::ActivationReason reason)
     default:
         break;
     }
+}
+
+void ClocksSettings::RestoreSetings()
+{
+    QRestoreSettings RestoreSettings;
+    ui->Slider_Red->setValue((*RestoreSettings.ReturnRedValue()));
+    ui->Slider_Green->setValue((*RestoreSettings.ReturnGreenValue()));
+    ui->Slider_Blue->setValue((*RestoreSettings.ReturnBlueValue()));
+    ui->Slider_Transparent->setValue((*RestoreSettings.ReturnAlphaValue()));
+    ui->Edit_coordinate_x->setText(QString::number(*RestoreSettings.ReturnXValue()));
+    ui->Edit_coordinate_y->setText(QString::number(*RestoreSettings.ReturnYValue()));
+    ui->Edit_ClocksType->setText((*RestoreSettings.ReturnClocksTypeValue()));
+    ui->Slider_FontSize->setValue((*RestoreSettings.ReturnFontSizeValue()));
+}
+
+void ClocksSettings::SaveSettings()
+{
+    QSaveSettings SaveSettings;
+    SaveSettings.SetRedValue(&Red);
+    SaveSettings.SetGreenValue(&Green);
+    SaveSettings.SetBlueValue(&Blue);
+    SaveSettings.SetAlphaValue(&Alpha);
+    SaveSettings.SetXValue(Coordinate_x());
+    SaveSettings.SetYValue(Coordinate_y());
+    SaveSettings.SetClocksTypeValue(GetTypeClocks());
+    SaveSettings.SetFontSize(FontSizeValue());
+    SaveSettings.Save();
 }
