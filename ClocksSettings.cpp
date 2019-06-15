@@ -7,7 +7,7 @@ ClocksSettings::ClocksSettings(QWidget *parent) :
 {
     ui->setupUi(this);
     RestoreSetings();
-    QFile CSSFile("themes/StandartTheme/StandartTheme.css");
+    QFile CSSFile("themes/" + ThemeName+ "/" + ThemeName + ".css");
     if(CSSFile.open(QIODevice::ReadOnly))
     {
         CSSStyle = CSSFile.readAll();

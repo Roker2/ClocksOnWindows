@@ -54,6 +54,7 @@ protected:
     int Blue = 255;
     int Alpha = 80;
     QString CSSStyle;
+    QString ThemeName = "StandartTheme";
 
 private slots:
     void on_Button_SetWhite_clicked();
