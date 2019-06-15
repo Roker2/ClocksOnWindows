@@ -32,6 +32,7 @@ protected:
     int FontSize = 36;
     QString ClocksType = "hh:mm:ss";
     QString SavePath = "save";
+    QString FileName = "savesettings.save";
 
 signals:
 

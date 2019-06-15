@@ -11,7 +11,7 @@ void QRestoreSettings::Restore()
     if (PathToSave.exists())
     {
         PathToSave.cd(SavePath);
-        QFile SaveFile(PathToSave.path() + "/savesettings.save");
+        QFile SaveFile(PathToSave.path() + "/" + FileName);
         if(SaveFile.open(QIODevice::ReadOnly | QIODevice::Text))
         {
             while(!SaveFile.atEnd())

@@ -10,7 +10,7 @@ void QSaveSettings::Save()
     QDir PathToSave(QDir::currentPath());
     PathToSave.mkdir(SavePath);
     PathToSave.cd(SavePath);
-    QFile SaveFile(PathToSave.path() + "/savesettings.save");
+    QFile SaveFile(PathToSave.path() + "/" + FileName);
     if(SaveFile.exists())
     {
         SaveFile.remove();
