@@ -12,6 +12,7 @@ class QSaveRestoreBase : public QObject
     Q_OBJECT
 public:
     explicit QSaveRestoreBase(QObject *parent = nullptr);
+    void setFileName(QString temp);
 
 protected:
     int Red = 255;
