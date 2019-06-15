@@ -1,17 +1,13 @@
 #ifndef QSAVESETTINGS_H
 #define QSAVESETTINGS_H
 
-#include <QObject>
-#include <QFile>
-#include <QDir>
-#include <QString>
-#include <QTextStream>
+#include "SaveRestoreSettings/QSaveRestoreBase.h"
 
-class QSaveSettings : public QObject
+class QSaveSettings : public QSaveRestoreBase
 {
     Q_OBJECT
 public:
-    explicit QSaveSettings(QObject *parent = nullptr);
+    explicit QSaveSettings(QSaveRestoreBase *parent = nullptr);
     void SetRedValue(int *value);
     void SetGreenValue(int *value);
     void SetBlueValue(int *value);
@@ -21,18 +17,6 @@ public:
     void SetClocksTypeValue(QString value);
     void SetFontSize(int value);
     void Save();
-
-protected:
-    int Red = 255;
-    int Green = 255;
-    int Blue = 255;
-    int Alpha = 80;
-    int X = 0;
-    int Y = 0;
-    int FontSize = 36;
-    QString ClocksType = "hh:mm:ss";
-    QString SavePath = "save";
-    QString FileName = "savesettings.save";
 
 signals:
 

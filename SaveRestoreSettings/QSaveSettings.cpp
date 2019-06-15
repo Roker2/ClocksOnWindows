@@ -1,6 +1,6 @@
 #include "QSaveSettings.h"
 
-QSaveSettings::QSaveSettings(QObject *parent) : QObject(parent)
+QSaveSettings::QSaveSettings(QSaveRestoreBase *parent) : QSaveRestoreBase(parent)
 {
 
 }

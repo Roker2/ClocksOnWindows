@@ -25,11 +25,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 HEADERS += ClocksSettings.h mainwindow.h QLabelClocks.h \
     QTimeAlarm.h \
     SaveRestoreSettings/QRestoreSettings.h \
+    SaveRestoreSettings/QSaveRestoreBase.h \
     SaveRestoreSettings/QSaveSettings.h
 FORMS += ClocksSettings.ui mainwindow.ui
 SOURCES += ClocksSettings.cpp main.cpp mainwindow.cpp QLabelClocks.cpp \
     QTimeAlarm.cpp \
     SaveRestoreSettings/QRestoreSettings.cpp \
+    SaveRestoreSettings/QSaveRestoreBase.cpp \
     SaveRestoreSettings/QSaveSettings.cpp
 
 #Program Information
