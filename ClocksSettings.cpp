@@ -12,8 +12,8 @@ ClocksSettings::ClocksSettings(QWidget *parent) :
     {
         CSSStyle = CSSFile.readAll();
         CSSFile.close();
+        setStyleSheet(CSSStyle);
     }
-    setStyleSheet(CSSStyle);
     trayIcon = new QSystemTrayIcon(this);
     QIcon Icon("icons/baseline_schedule_white_48dp.png");
     trayIcon->setIcon(Icon);
