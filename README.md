@@ -1,6 +1,6 @@
 <div align="center">
 	<h1>Clocks On Windows</h1>
-	<img src="https://gitlab.com/Roker2/clocksonwindows/raw/staging/icons/baseline_schedule_white_48dp.png" width="150" align="center" />
+	<img src="https://gitlab.com/Roker2/clocksonwindows/raw/staging/icons/baseline_schedule_white_48dp.png" width="76" align="center" />
 	<br/> <br/>
 </div>
 
