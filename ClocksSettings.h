@@ -38,10 +38,10 @@ public:
     void TimerMinusTime(int milisecunds);
     QTime TimerValue();
     Qt::CheckState TimerOrClocks();
+    QString getCSSStyle();
     int ClocksWidth;
     bool ChangedFont = false;
     bool TimerWasEnabled = false;
-    QString getCSSStyle();
 
 protected:
     void EnableAlarm();
@@ -75,12 +75,11 @@ private slots:
     void on_Slider_Blue_valueChanged(int value);
     void on_Slider_Transparent_valueChanged(int value);
     void iconActivated(QSystemTrayIcon::ActivationReason reason);
-
     void on_Button_ExportSettings_clicked();
 
 private:
     Ui::ClocksSettings *ui;
-    QSystemTrayIcon         * trayIcon;
+    QSystemTrayIcon *trayIcon;
 };
 
 #endif // CLOCKS_H
