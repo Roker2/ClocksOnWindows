@@ -6,7 +6,7 @@ ClocksSettings::ClocksSettings(QWidget *parent) :
     ui(new Ui::ClocksSettings)
 {
     ui->setupUi(this);
-    RestoreSetings();
+    RestoreSettings();
     QFile CSSFile("themes/" + ThemeName+ "/" + ThemeName + ".css");
     if(CSSFile.open(QIODevice::ReadOnly))
     {
@@ -246,7 +246,7 @@ void ClocksSettings::iconActivated(QSystemTrayIcon::ActivationReason reason)
     }
 }
 
-void ClocksSettings::RestoreSetings()
+void ClocksSettings::RestoreSettings()
 {
     RestoreSettingsValue = new QRestoreSettings;
     ui->Slider_Red->setValue((*RestoreSettingsValue->ReturnRedValue()));

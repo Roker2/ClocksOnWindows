@@ -46,7 +46,7 @@ public:
 protected:
     void EnableAlarm();
     void EnableTimer();
-    void RestoreSetings();
+    void RestoreSettings();
     void SaveSettings();
     void SaveSettings_Start();
     bool AlarmState = false;
