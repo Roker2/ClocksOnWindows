@@ -282,6 +282,6 @@ void ClocksSettings::SaveSettings()
 void ClocksSettings::on_Button_ExportSettings_clicked()
 {
     SaveSettings_Start();
-    SaveSettingsValue->Save(QFileDialog::getSaveFileName(0, "Export Settings", "", "*.save"));
+    SaveSettingsValue->Save(QFileDialog::getSaveFileName(this, "Export Settings", "", "*.save"));
     delete SaveSettingsValue;
 }
