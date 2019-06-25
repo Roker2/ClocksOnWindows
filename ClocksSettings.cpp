@@ -259,30 +259,29 @@ void ClocksSettings::RestoreSetings()
     ui->Slider_FontSize->setValue((*RestoreSettings.ReturnFontSizeValue()));
 }
 
+void ClocksSettings::SaveSettings_Start()
+{
+    SaveSettingsValue = new QSaveSettings;
+    SaveSettingsValue->SetRedValue(&Red);
+    SaveSettingsValue->SetGreenValue(&Green);
+    SaveSettingsValue->SetBlueValue(&Blue);
+    SaveSettingsValue->SetAlphaValue(&Alpha);
+    SaveSettingsValue->SetXValue(Coordinate_x());
+    SaveSettingsValue->SetYValue(Coordinate_y());
+    SaveSettingsValue->SetClocksTypeValue(GetTypeClocks());
+    SaveSettingsValue->SetFontSize(FontSizeValue());
+}
+
 void ClocksSettings::SaveSettings()
 {
-    QSaveSettings SaveSettings;
-    SaveSettings.SetRedValue(&Red);
-    SaveSettings.SetGreenValue(&Green);
-    SaveSettings.SetBlueValue(&Blue);
-    SaveSettings.SetAlphaValue(&Alpha);
-    SaveSettings.SetXValue(Coordinate_x());
-    SaveSettings.SetYValue(Coordinate_y());
-    SaveSettings.SetClocksTypeValue(GetTypeClocks());
-    SaveSettings.SetFontSize(FontSizeValue());
-    SaveSettings.Save();
+    SaveSettings_Start();
+    SaveSettingsValue->Save();
+    delete SaveSettingsValue;
 }
 
 void ClocksSettings::on_Button_ExportSettings_clicked()
 {
-    QSaveSettings SaveSettings;
-    SaveSettings.SetRedValue(&Red);
-    SaveSettings.SetGreenValue(&Green);
-    SaveSettings.SetBlueValue(&Blue);
-    SaveSettings.SetAlphaValue(&Alpha);
-    SaveSettings.SetXValue(Coordinate_x());
-    SaveSettings.SetYValue(Coordinate_y());
-    SaveSettings.SetClocksTypeValue(GetTypeClocks());
-    SaveSettings.SetFontSize(FontSizeValue());
-    SaveSettings.Save(QFileDialog::getSaveFileName(0, "Export Settings", "", "*.save"));
+    SaveSettings_Start();
+    SaveSettingsValue->Save(QFileDialog::getSaveFileName(0, "Export Settings", "", "*.save"));
+    delete SaveSettingsValue;
 }

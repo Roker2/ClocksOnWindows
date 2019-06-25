@@ -48,6 +48,7 @@ protected:
     void EnableTimer();
     void RestoreSetings();
     void SaveSettings();
+    void SaveSettings_Start();
     bool AlarmState = false;
     bool TimerState = false;
     int Red = 255;
@@ -56,6 +57,7 @@ protected:
     int Alpha = 80;
     QString CSSStyle;
     QString ThemeName = "StandartTheme";
+    QSaveSettings *SaveSettingsValue;
 
 private slots:
     void on_Button_SetWhite_clicked();
