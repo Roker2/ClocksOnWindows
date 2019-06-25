@@ -58,6 +58,7 @@ protected:
     QString CSSStyle;
     QString ThemeName = "StandartTheme";
     QSaveSettings *SaveSettingsValue;
+    QRestoreSettings *RestoreSettingsValue;
 
 private slots:
     void on_Button_SetWhite_clicked();

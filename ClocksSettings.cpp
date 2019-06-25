@@ -248,15 +248,16 @@ void ClocksSettings::iconActivated(QSystemTrayIcon::ActivationReason reason)
 
 void ClocksSettings::RestoreSetings()
 {
-    QRestoreSettings RestoreSettings;
-    ui->Slider_Red->setValue((*RestoreSettings.ReturnRedValue()));
-    ui->Slider_Green->setValue((*RestoreSettings.ReturnGreenValue()));
-    ui->Slider_Blue->setValue((*RestoreSettings.ReturnBlueValue()));
-    ui->Slider_Transparent->setValue((*RestoreSettings.ReturnAlphaValue()));
-    ui->Edit_coordinate_x->setText(QString::number(*RestoreSettings.ReturnXValue()));
-    ui->Edit_coordinate_y->setText(QString::number(*RestoreSettings.ReturnYValue()));
-    ui->Edit_ClocksType->setText((*RestoreSettings.ReturnClocksTypeValue()));
-    ui->Slider_FontSize->setValue((*RestoreSettings.ReturnFontSizeValue()));
+    RestoreSettingsValue = new QRestoreSettings;
+    ui->Slider_Red->setValue((*RestoreSettingsValue->ReturnRedValue()));
+    ui->Slider_Green->setValue((*RestoreSettingsValue->ReturnGreenValue()));
+    ui->Slider_Blue->setValue((*RestoreSettingsValue->ReturnBlueValue()));
+    ui->Slider_Transparent->setValue((*RestoreSettingsValue->ReturnAlphaValue()));
+    ui->Edit_coordinate_x->setText(QString::number(*RestoreSettingsValue->ReturnXValue()));
+    ui->Edit_coordinate_y->setText(QString::number(*RestoreSettingsValue->ReturnYValue()));
+    ui->Edit_ClocksType->setText((*RestoreSettingsValue->ReturnClocksTypeValue()));
+    ui->Slider_FontSize->setValue((*RestoreSettingsValue->ReturnFontSizeValue()));
+    delete RestoreSettingsValue;
 }
 
 void ClocksSettings::SaveSettings_Start()
