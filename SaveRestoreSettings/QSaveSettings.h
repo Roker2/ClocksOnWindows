@@ -17,6 +17,7 @@ public:
     void SetClocksTypeValue(QString value);
     void SetFontSize(int value);
     void Save();
+    void Save(QString FilePath);
 
 signals:
 

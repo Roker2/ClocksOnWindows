@@ -28,6 +28,26 @@ void QSaveSettings::Save()
     SaveFile.close();
 }
 
+void QSaveSettings::Save(QString FilePath)
+{
+    QFile SaveFile(FilePath);
+    if(SaveFile.exists())
+    {
+        SaveFile.remove();
+    }
+    SaveFile.open(QIODevice::WriteOnly | QIODevice::Text);
+    QTextStream stream(&SaveFile);
+    stream << "Red=" << Red << endl;
+    stream << "Green=" << Green << endl;
+    stream << "Blue=" << Blue << endl;
+    stream << "Alpha=" << Alpha << endl;
+    stream << "X=" << X << endl;
+    stream << "Y=" << Y << endl;
+    stream << "ClocksType=" << ClocksType << endl;
+    stream << "FontSize=" << FontSize << endl;
+    SaveFile.close();
+}
+
 void QSaveSettings::SetRedValue(int *value)
 {
     Red = (*value);
