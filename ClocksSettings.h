@@ -47,6 +47,7 @@ protected:
     void EnableAlarm();
     void EnableTimer();
     void RestoreSettings();
+    void RestoreSettings_End();
     void SaveSettings();
     void SaveSettings_Start();
     bool AlarmState = false;
@@ -77,6 +78,8 @@ private slots:
     void on_Slider_Transparent_valueChanged(int value);
     void iconActivated(QSystemTrayIcon::ActivationReason reason);
     void on_Button_ExportSettings_clicked();
+
+    void on_Button_ImportSettings_clicked();
 
 private:
     Ui::ClocksSettings *ui;

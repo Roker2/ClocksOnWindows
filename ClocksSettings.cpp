@@ -249,6 +249,17 @@ void ClocksSettings::iconActivated(QSystemTrayIcon::ActivationReason reason)
 void ClocksSettings::RestoreSettings()
 {
     RestoreSettingsValue = new QRestoreSettings;
+    RestoreSettings_End();
+}
+
+void ClocksSettings::on_Button_ImportSettings_clicked()
+{
+    RestoreSettingsValue = new QRestoreSettings(QFileDialog::getOpenFileName(this, "Export Settings", "", "*.save"));
+    RestoreSettings_End();
+}
+
+void ClocksSettings::RestoreSettings_End()
+{
     ui->Slider_Red->setValue((*RestoreSettingsValue->ReturnRedValue()));
     ui->Slider_Green->setValue((*RestoreSettingsValue->ReturnGreenValue()));
     ui->Slider_Blue->setValue((*RestoreSettingsValue->ReturnBlueValue()));
