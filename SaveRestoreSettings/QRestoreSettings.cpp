@@ -5,6 +5,11 @@ QRestoreSettings::QRestoreSettings(QSaveRestoreBase *parent) : QSaveRestoreBase(
     Restore();
 }
 
+QRestoreSettings::QRestoreSettings(QString FilePath)
+{
+    Restore(FilePath);
+}
+
 void QRestoreSettings::Restore()
 {
     QDir PathToSave(QDir::currentPath());
@@ -41,6 +46,39 @@ void QRestoreSettings::Restore()
         }
         SaveFile.close();
     }
+}
+
+void QRestoreSettings::Restore(QString FilePath)
+{
+    QFile SaveFile(FilePath);
+    if(SaveFile.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
+        while(!SaveFile.atEnd())
+        {
+            QString str = SaveFile.readLine();
+            QStringList list = str.split("=");
+            if(list.at(0) == "Red")
+                Red = list.at(1).toInt();
+            else if(list.at(0) == "Green")
+                Green = list.at(1).toInt();
+            else if(list.at(0) == "Blue")
+                Blue = list.at(1).toInt();
+            else if(list.at(0) == "Alpha")
+                Alpha = list.at(1).toInt();
+            else if(list.at(0) == "X")
+                X = list.at(1).toInt();
+            else if(list.at(0) == "Y")
+                Y = list.at(1).toInt();
+            else if(list.at(0) == "ClocksType")
+            {
+                ClocksType = list.at(1);
+                ClocksType.chop(1);//last char is '/n', this char unneeded
+            }
+            else if(list.at(0) == "FontSize")
+                FontSize = list.at(1).toInt();
+        }
+    }
+    SaveFile.close();
 }
 
 int *QRestoreSettings::ReturnRedValue()

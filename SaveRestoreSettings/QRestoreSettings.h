@@ -8,7 +8,9 @@ class QRestoreSettings : public QSaveRestoreBase
     Q_OBJECT
 public:
     explicit QRestoreSettings(QSaveRestoreBase *parent = nullptr);
+    QRestoreSettings(QString FilePath);
     void Restore();
+    void Restore(QString FilePath);
     int *ReturnRedValue();
     int *ReturnGreenValue();
     int *ReturnBlueValue();
