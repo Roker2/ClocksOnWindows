@@ -272,3 +272,17 @@ void ClocksSettings::SaveSettings()
     SaveSettings.SetFontSize(FontSizeValue());
     SaveSettings.Save();
 }
+
+void ClocksSettings::on_Button_ExportSettings_clicked()
+{
+    QSaveSettings SaveSettings;
+    SaveSettings.SetRedValue(&Red);
+    SaveSettings.SetGreenValue(&Green);
+    SaveSettings.SetBlueValue(&Blue);
+    SaveSettings.SetAlphaValue(&Alpha);
+    SaveSettings.SetXValue(Coordinate_x());
+    SaveSettings.SetYValue(Coordinate_y());
+    SaveSettings.SetClocksTypeValue(GetTypeClocks());
+    SaveSettings.SetFontSize(FontSizeValue());
+    SaveSettings.Save(QFileDialog::getSaveFileName(0, "Export Settings", "", "*.save"));
+}

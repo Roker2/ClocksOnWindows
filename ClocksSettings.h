@@ -6,6 +6,7 @@
 #include <QDesktopWidget>
 #include <QSystemTrayIcon>
 #include <QIcon>
+#include <QFileDialog>
 #include <SaveRestoreSettings/QSaveSettings.h>
 #include <SaveRestoreSettings/QRestoreSettings.h>
 
@@ -72,6 +73,8 @@ private slots:
     void on_Slider_Blue_valueChanged(int value);
     void on_Slider_Transparent_valueChanged(int value);
     void iconActivated(QSystemTrayIcon::ActivationReason reason);
+
+    void on_Button_ExportSettings_clicked();
 
 private:
     Ui::ClocksSettings *ui;
