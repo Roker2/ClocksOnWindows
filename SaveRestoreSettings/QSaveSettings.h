@@ -18,6 +18,7 @@ public:
     void SetFontSize(int value);
     void SetClocksCSSStyle(QString value);
     void SetUseCSS(int value);
+    void SetFontName(QString value);
     void Save();
     void Save(QString FilePath);
     void SaveCSS();
