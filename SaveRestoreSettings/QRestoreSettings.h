@@ -11,6 +11,7 @@ public:
     QRestoreSettings(QString FilePath);
     void Restore();
     void Restore(QString FilePath);
+    void RestoreCSS();
     int *ReturnRedValue();
     int *ReturnGreenValue();
     int *ReturnBlueValue();
@@ -18,7 +19,9 @@ public:
     int *ReturnXValue();
     int *ReturnYValue();
     QString *ReturnClocksTypeValue();
+    QString *RestoreClocksCSSStyle();
     int *ReturnFontSizeValue();
+    int *ReturnUseCSS();
 
 signals:
 

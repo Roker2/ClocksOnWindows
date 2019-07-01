@@ -3,6 +3,7 @@
 QRestoreSettings::QRestoreSettings(QSaveRestoreBase *parent) : QSaveRestoreBase(parent)
 {
     Restore();
+    RestoreCSS();
 }
 
 QRestoreSettings::QRestoreSettings(QString FilePath)
@@ -42,6 +43,8 @@ void QRestoreSettings::Restore()
                 }
                 else if(list.at(0) == "FontSize")
                     FontSize = list.at(1).toInt();
+                else if(list.at(0) == "UseCSS")
+                    UseCSS = list.at(1).toInt();
             }
         }
         SaveFile.close();
@@ -76,9 +79,31 @@ void QRestoreSettings::Restore(QString FilePath)
             }
             else if(list.at(0) == "FontSize")
                 FontSize = list.at(1).toInt();
+            else if(list.at(0) == "UseCSS")
+                UseCSS = list.at(1).toInt();
         }
     }
     SaveFile.close();
+}
+
+void QRestoreSettings::RestoreCSS()
+{
+    QDir PathToSave(QDir::currentPath());
+    if (PathToSave.exists())
+    {
+        PathToSave.cd(SavePath);
+        QFile SaveFile(PathToSave.path() + "/" + FileNameCSS);
+        if(SaveFile.open(QIODevice::ReadOnly | QIODevice::Text))
+        {
+            ClocksCSSStyle = SaveFile.readAll();
+        }
+        SaveFile.close();
+    }
+}
+
+QString *QRestoreSettings::RestoreClocksCSSStyle()
+{
+    return &ClocksCSSStyle;
 }
 
 int *QRestoreSettings::ReturnRedValue()
@@ -119,4 +144,9 @@ QString *QRestoreSettings::ReturnClocksTypeValue()
 int *QRestoreSettings::ReturnFontSizeValue()
 {
     return &FontSize;
+}
+
+int *QRestoreSettings::ReturnUseCSS()
+{
+    return &UseCSS;
 }
