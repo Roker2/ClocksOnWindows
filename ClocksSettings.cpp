@@ -297,3 +297,13 @@ void ClocksSettings::on_Button_ExportSettings_clicked()
     SaveSettingsValue->Save(QFileDialog::getSaveFileName(this, "Export Settings", "", "*.save"));
     delete SaveSettingsValue;
 }
+
+void ClocksSettings::on_AboutProgram_OpenSources_clicked()
+{
+    QDesktopServices::openUrl(QUrl("https://gitlab.com/Roker2/clocksonwindows"));
+}
+
+void ClocksSettings::on_AboutProgram_Donation_clicked()
+{
+    QDesktopServices::openUrl(QUrl("https://qiwi.me/roker2"));
+}

@@ -7,8 +7,9 @@
 #include <QSystemTrayIcon>
 #include <QIcon>
 #include <QFileDialog>
-#include <SaveRestoreSettings/QSaveSettings.h>
-#include <SaveRestoreSettings/QRestoreSettings.h>
+#include <QDesktopServices>
+#include "SaveRestoreSettings/QSaveSettings.h"
+#include "SaveRestoreSettings/QRestoreSettings.h"
 
 namespace Ui {
 class ClocksSettings;
@@ -78,8 +79,9 @@ private slots:
     void on_Slider_Transparent_valueChanged(int value);
     void iconActivated(QSystemTrayIcon::ActivationReason reason);
     void on_Button_ExportSettings_clicked();
-
     void on_Button_ImportSettings_clicked();
+    void on_AboutProgram_OpenSources_clicked();
+    void on_AboutProgram_Donation_clicked();
 
 private:
     Ui::ClocksSettings *ui;
