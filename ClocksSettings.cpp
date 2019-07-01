@@ -288,12 +288,15 @@ void ClocksSettings::SaveSettings_Start()
     SaveSettingsValue->SetYValue(Coordinate_y());
     SaveSettingsValue->SetClocksTypeValue(GetTypeClocks());
     SaveSettingsValue->SetFontSize(FontSizeValue());
+    SaveSettingsValue->SetUseCSS(UseCSS());
 }
 
 void ClocksSettings::SaveSettings()
 {
     SaveSettings_Start();
     SaveSettingsValue->Save();
+    SaveSettingsValue->SetClocksCSSStyle(ClocksCSSStyle());
+    SaveSettingsValue->SaveCSS();
     delete SaveSettingsValue;
 }
 
