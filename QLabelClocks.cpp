@@ -33,7 +33,7 @@ void QLabelClocks::timerEvent(QTimerEvent*)
 {
     if (SettingsMenu)
     {
-        if (red != SettingsMenu->RedValue() || green != SettingsMenu->GreenValue() || blue != SettingsMenu->BlueValue() || alpha != SettingsMenu->AlphaValue() || SettingsMenu->ChangedFont || FontSize != SettingsMenu->FontSizeValue())
+        if (red != SettingsMenu->RedValue() || green != SettingsMenu->GreenValue() || blue != SettingsMenu->BlueValue() || alpha != SettingsMenu->AlphaValue() || SettingsMenu->ChangedFont || FontSize != SettingsMenu->FontSizeValue() || SettingsMenu->TextCSSChanged || !SettingsMenu->UseCSS())
         {
             red = SettingsMenu->RedValue();
             green = SettingsMenu->GreenValue();
@@ -42,7 +42,13 @@ void QLabelClocks::timerEvent(QTimerEvent*)
             FontSize = SettingsMenu->FontSizeValue();
             SettingsMenu->ChangedFont = false;
             MainMenuSetGeometry();
-            changeColor();
+            if(SettingsMenu->UseCSS() == Qt::CheckState())
+                changeColor();
+            else
+            {
+                SetCSSStyle(SettingsMenu->ClocksCSSStyle());
+                SettingsMenu->TextCSSChanged = false;
+            }
             MainMenuSetGeometry();
         }
         if (ClocksType != SettingsMenu->GetTypeClocks())
@@ -96,6 +102,11 @@ void QLabelClocks::SetTypeClocks(QString type)
 void QLabelClocks::SetTime(QTime *time)
 {
     setText(time->toString(ClocksType));
+}
+
+void QLabelClocks::SetCSSStyle(QString CSSStyle)
+{
+    setStyleSheet("QLabel {" + CSSStyle + "font-size:" + QString::number(FontSize) + "px}");
 }
 
 QLabelClocks::QLabelClocks(QWidget *parent, ClocksSettings *Settings) :

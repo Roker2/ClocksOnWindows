@@ -20,6 +20,7 @@ protected:
     void SetSizeAndPos();
     void MainMenuSetGeometry();
     int HeightLabelMax();
+    void SetCSSStyle(QString CSSStyle);
 
 public:
     void SetSettingsMenu(ClocksSettings *temp);
