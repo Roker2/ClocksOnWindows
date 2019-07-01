@@ -20,6 +20,7 @@ public:
     int *ReturnYValue();
     QString *ReturnClocksTypeValue();
     QString *RestoreClocksCSSStyle();
+    QString *RestoreFontName();
     int *ReturnFontSizeValue();
     int *ReturnUseCSS();
 

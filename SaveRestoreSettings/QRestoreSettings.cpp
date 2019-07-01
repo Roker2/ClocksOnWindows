@@ -45,6 +45,11 @@ void QRestoreSettings::Restore()
                     FontSize = list.at(1).toInt();
                 else if(list.at(0) == "UseCSS")
                     UseCSS = list.at(1).toInt();
+                else if(list.at(0) == "FontName")
+                {
+                    FontName = list.at(1);
+                    FontName.chop(1);//last char is '/n', this char unneeded
+                }
             }
         }
         SaveFile.close();
@@ -81,6 +86,11 @@ void QRestoreSettings::Restore(QString FilePath)
                 FontSize = list.at(1).toInt();
             else if(list.at(0) == "UseCSS")
                 UseCSS = list.at(1).toInt();
+            else if(list.at(0) == "FontName")
+            {
+                FontName = list.at(1);
+                FontName.chop(1);//last char is '/n', this char unneeded
+            }
         }
     }
     SaveFile.close();
@@ -149,4 +159,9 @@ int *QRestoreSettings::ReturnFontSizeValue()
 int *QRestoreSettings::ReturnUseCSS()
 {
     return &UseCSS;
+}
+
+QString *QRestoreSettings::RestoreFontName()
+{
+    return &FontName;
 }
