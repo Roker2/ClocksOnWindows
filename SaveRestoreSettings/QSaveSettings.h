@@ -16,8 +16,11 @@ public:
     void SetYValue(int value);
     void SetClocksTypeValue(QString value);
     void SetFontSize(int value);
+    void SetClocksCSSStyle(QString value);
+    void SetUseCSS(int value);
     void Save();
     void Save(QString FilePath);
+    void SaveCSS();
 
 signals:
 

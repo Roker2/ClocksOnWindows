@@ -25,6 +25,7 @@ void QSaveSettings::Save()
     stream << "Y=" << Y << endl;
     stream << "ClocksType=" << ClocksType << endl;
     stream << "FontSize=" << FontSize << endl;
+    stream << "UseCSS=" << UseCSS << endl;
     SaveFile.close();
 }
 
@@ -45,6 +46,23 @@ void QSaveSettings::Save(QString FilePath)
     stream << "Y=" << Y << endl;
     stream << "ClocksType=" << ClocksType << endl;
     stream << "FontSize=" << FontSize << endl;
+    SaveFile.close();
+}
+
+void QSaveSettings::SaveCSS()
+{
+    QDir PathToSave(QDir::currentPath());
+    PathToSave.mkdir(SavePath);
+    PathToSave.cd(SavePath);
+    QFile SaveFile(PathToSave.path() + "/" + FileNameCSS);
+    SaveFile.setFileName(PathToSave.path() + "/" + FileNameCSS);
+    if(SaveFile.exists())
+    {
+        SaveFile.remove();
+    }
+    SaveFile.open(QIODevice::WriteOnly | QIODevice::Text);
+    QTextStream CSSstream(&SaveFile);
+    CSSstream << ClocksCSSStyle;
     SaveFile.close();
 }
 
@@ -86,4 +104,14 @@ void QSaveSettings::SetClocksTypeValue(QString value)
 void QSaveSettings::SetFontSize(int value)
 {
     FontSize = value;
+}
+
+void QSaveSettings::SetClocksCSSStyle(QString value)
+{
+    ClocksCSSStyle = value;
+}
+
+void QSaveSettings::SetUseCSS(int value)
+{
+    UseCSS = value;
 }
