@@ -46,6 +46,7 @@ void QSaveSettings::Save(QString FilePath)
     stream << "Y=" << Y << endl;
     stream << "ClocksType=" << ClocksType << endl;
     stream << "FontSize=" << FontSize << endl;
+    stream << "UseCSS=" << UseCSS << endl;
     SaveFile.close();
 }
 
