@@ -22,9 +22,12 @@ protected:
     int X = 0;
     int Y = 0;
     int FontSize = 36;
+    int UseCSS = 0;
     QString ClocksType = "hh:mm:ss";
     QString SavePath = "save";
     QString FileName = "savesettings.save";
+    QString FileNameCSS = "clocks.css";
+    QString ClocksCSSStyle = "";
 
 signals:
 
