@@ -6,6 +6,7 @@ ClocksSettings::ClocksSettings(QWidget *parent) :
     ui(new Ui::ClocksSettings)
 {
     ui->setupUi(this);
+    ui->textEdit_CSS->hide();
     RestoreSettings();
     QFile CSSFile("themes/" + ThemeName+ "/" + ThemeName + ".css");
     if(CSSFile.open(QIODevice::ReadOnly))
@@ -208,6 +209,11 @@ Qt::CheckState ClocksSettings::TimerOrClocks()
     return ui->checkBox_clocks_or_timer->checkState();
 }
 
+Qt::CheckState ClocksSettings::UseCSS()
+{
+    return ui->checkBox_UseCSS->checkState();
+}
+
 void ClocksSettings::on_Slider_Red_valueChanged(int value)
 {
     Red = value;
@@ -306,4 +312,25 @@ void ClocksSettings::on_AboutProgram_OpenSources_clicked()
 void ClocksSettings::on_AboutProgram_Donation_clicked()
 {
     QDesktopServices::openUrl(QUrl("https://qiwi.me/roker2"));
+}
+
+void ClocksSettings::on_checkBox_UseCSS_stateChanged(int arg1)
+{
+    if(arg1)
+    {
+        ui->textEdit_CSS->show();
+        TextCSSChanged = true;
+    }
+    else
+        ui->textEdit_CSS->hide();
+}
+
+QString ClocksSettings::ClocksCSSStyle()
+{
+    return ui->textEdit_CSS->toPlainText();
+}
+
+void ClocksSettings::on_textEdit_CSS_textChanged()
+{
+    TextCSSChanged = true;
 }

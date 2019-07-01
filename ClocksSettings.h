@@ -40,9 +40,12 @@ public:
     QTime TimerValue();
     Qt::CheckState TimerOrClocks();
     QString getCSSStyle();
+    Qt::CheckState UseCSS();
+    QString ClocksCSSStyle();
     int ClocksWidth;
     bool ChangedFont = false;
     bool TimerWasEnabled = false;
+    bool TextCSSChanged = false;
 
 protected:
     void EnableAlarm();
@@ -82,6 +85,10 @@ private slots:
     void on_Button_ImportSettings_clicked();
     void on_AboutProgram_OpenSources_clicked();
     void on_AboutProgram_Donation_clicked();
+
+    void on_checkBox_UseCSS_stateChanged(int arg1);
+
+    void on_textEdit_CSS_textChanged();
 
 private:
     Ui::ClocksSettings *ui;
