@@ -28,6 +28,7 @@ protected:
     QString FileName = "savesettings.save";
     QString FileNameCSS = "clocks.css";
     QString ClocksCSSStyle = "";
+    QString FontName = "";
 
 signals:
 
