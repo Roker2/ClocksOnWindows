@@ -274,6 +274,8 @@ void ClocksSettings::RestoreSettings_End()
     ui->Edit_coordinate_y->setText(QString::number(*RestoreSettingsValue->ReturnYValue()));
     ui->Edit_ClocksType->setText((*RestoreSettingsValue->ReturnClocksTypeValue()));
     ui->Slider_FontSize->setValue((*RestoreSettingsValue->ReturnFontSizeValue()));
+    ui->checkBox_UseCSS->setCheckState((Qt::CheckState)(*RestoreSettingsValue->ReturnUseCSS()));
+    ui->textEdit_CSS->setText((*RestoreSettingsValue->RestoreClocksCSSStyle()));
     delete RestoreSettingsValue;
 }
 
