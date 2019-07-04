@@ -35,7 +35,7 @@ SOURCES += ClocksSettings.cpp main.cpp mainwindow.cpp QLabelClocks.cpp \
     SaveRestoreSettings/QSaveSettings.cpp
 
 #Program Information
-VERSION = 0.4.6.0
+VERSION = 0.5.0.0
 win32:RC_ICONS += icons/baseline_extension_white_48dp.ico
 QMAKE_TARGET_PRODUCT = Clocks On Windows
 QMAKE_TARGET_DESCRIPTION = Program by Dmitry Minko (Roker2)
