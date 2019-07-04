@@ -276,7 +276,8 @@ void ClocksSettings::RestoreSettings_End()
     ui->Slider_FontSize->setValue((*RestoreSettingsValue->ReturnFontSizeValue()));
     ui->checkBox_UseCSS->setCheckState((Qt::CheckState)(*RestoreSettingsValue->ReturnUseCSS()));
     ui->textEdit_CSS->setText((*RestoreSettingsValue->RestoreClocksCSSStyle()));
-    ui->fontComboBox->setCurrentFont(QFont((*RestoreSettingsValue->RestoreFontName())));
+    if((*RestoreSettingsValue->RestoreFontName()) != "")
+        ui->fontComboBox->setCurrentFont(QFont((*RestoreSettingsValue->RestoreFontName())));
     delete RestoreSettingsValue;
 }
 
