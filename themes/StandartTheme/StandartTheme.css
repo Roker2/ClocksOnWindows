@@ -143,3 +143,61 @@ QLineEdit:disabled {
 QLineEdit[collision="true"] {
 	color: red;
 }
+
+QTabWidget, QTabWidget::tab-bar {
+    border-color: #292b2d;
+}
+
+QDialog QTabWidget::tab-bar {
+    left: 10px;
+    height: 26px;
+    border: 1px solid #292b2d;
+    border-bottom: none;
+}
+
+QDialog QTabWidget::pane {
+    border: 1px solid #292b2d;
+    background-color: #3c3f41;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #444, stop:0.03 #3c3f41, stop:0.05 #3c3f41, stop:1 #3c3f41);
+}
+
+QTabBar {
+	margin: 0px;
+	padding: 0px;
+	font-weight: bold;
+	color: rgb(170, 173, 164);
+}
+
+QTabBar::tab {
+	border: none;
+	margin: 0px;
+	padding: 2px;
+	min-height: 4ex;
+	min-width: 8ex;
+}
+
+QTabBar::tab:selected {
+        border: none;
+        margin: 0px;
+        color: rgb(220, 223, 214);
+}
+
+QTabBar::tab:top {
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+QTabBar::tab:top:selected {
+        background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 rgb(183, 184, 185), stop: 1 rgb(111, 113, 114));
+}
+
+QTabBar::tab:top:!selected {
+        background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 rgb(41, 41, 49), stop: 0.2 rgb(73, 74, 84), stop: 1 rgb(58, 60, 73));
+}
+
+QTabBar::tab:bottom {
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+}
